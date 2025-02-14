@@ -1,0 +1,35 @@
+# Joining functions
+
+The joining functions allow you to merge separate data sets based on matching keys.
+
+-   `left_join()` - Keeps all the values from the left table and matching rows from the right table. All unmatched rows in the right table will be NA.
+-   `right_join()` - Keeps all the values from the right table and matching rows from the left table. All unmatched rows in the left table will be NA.
+-   `inner_join()` - Keeps all values that have matching keys in both tables.
+-   `full_join()` - Keeps all values from both tables and all unmatched rows will be NA.
+
+### Useful functions and parameters
+
+> -   `by` - Specifies the key column/s to join on.
+> -   `c()` - Allows you to combine different joining keys if they don't have the same name.
+
+::: callout-tip
+## You do this by writing:
+
+joining_function(left data set, right data set, by = "column name")
+
+joining_function(left data set, right data set, by = c(left column name= right column name))
+:::
+
+Here you can see an example of how to join to data sets:
+
+```{r}
+#| eval: false
+inner_join(band_members, band_instruments, by = "name")
+
+left_join(band_members, band_instruments, by = "name")
+
+right_join(band_members, band_instruments, by = "name")
+
+full_join(band_members, band_instruments, by = "name")
+
+```

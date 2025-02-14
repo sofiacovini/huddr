@@ -1,0 +1,160 @@
+# Basic R functions
+
+::: callout-note
+## Functions
+
+-   `library()` - Loads packages into R.
+-   [`filter()`](basic_functions_extended.qmd){#Filter}- Allows you to retain/filter rows from a data set depending on the condition you want.
+-   [`select()`](basic_functions_extended.qmd){#Select} - Allows you to pick/keep specific columns from a data set.
+-   [`count()`](basic_functions_extended.qmd){#count} - Counts the number of occurrences of all distinct elements in a column.
+-   [`mutate()`](basic_functions_extended.qmd){#Mutate} - Allows you to create and modify columns from a data set.
+-   [`arrange()`](basic_functions_extended.qmd){#Arrange} - Allows for the ordering of the data by different variables.
+-   [`group_by()`](basic_functions_extended.qmd){#Group_by} - Uses an existing table to form a grouped table by splitting the data sate based on one or more variables.
+-   [`summarise()`](basic_functions_extended.qmd){#Summarise} - Allows you to calculate summary statistics and is usually used on grouped data produced by `group_by()`, as it creates one row for each combination of grouping variables.
+-   [`tibble()`](basic_functions_extended.qmd){#Tibble} - Allows you to create new data frames.
+-   [`drop_na()`](basic_functions_extended.qmd){#Drop_na} - Allows you to to drop all the rows containing missing values.
+:::
+
+------------------------------------------------------------------------
+
+## Joining functions
+
+::: callout-note
+## Functions
+
+-   `left_join()` - Keeps all the values from the left table and matching rows from the right table.
+-   `right_join()` - Keeps all the values from the right table and matching rows from the left table.
+-   `inner_join()` - Keeps all values that have matching keys in both tables.
+-   `full_join()` - Keeps all values from both tables.
+:::
+
+------------------------------------------------------------------------
+
+## Pivot functions
+
+::: callout-note
+## Functions
+
+-   `pivot_longer()` - Allows you to lengthen your data set from a wide format to a long format by reducing the number of columns and increasing the number of rows.
+-   `pivot_wider()` - Allows you to widen your data set from a long format to a wide format by reducing the number of rows and increasing the number of columns.
+:::
+
+------------------------------------------------------------------------
+
+## Useful operators
+
+`|>` or `%\>%`
+
+::: callout
+-   This is a pipe operator that allows you to apply multiple functions to your data set in a chain like sequence.
+-   You can type this operator by pressing: **shift + control + M**
+:::
+
+Here you can see an example of how to use the pipe operator to chain different functions:
+
+```{r}
+#| include: false  
+library(tidyverse)
+library(here)
+rodents <- read_tsv(here("data", "rodents_full.txt"))
+```
+
+```{r}
+#| eval: false
+rodents |> 
+  filter(species_id=="NL") |> 
+  select(species_id, hindfoot_length, sex)
+```
+
+`%in%`
+
+::: callout
+-   This is a logical operator that allows you to check if an element from one vector is present in another vector.
+:::
+
+`!`
+
+::: callout
+-   This is a negation operator, which allows you to tell a function to do the opposite.
+:::
+
+This is an example of how you can oppose the filter() in order to filter **out** variables:
+
+```{r}
+#| eval: false
+rodents |> 
+  filter(!species_id=="NL")
+```
+
+`+`, `-`, `log()`, `*`, `/`
+
+::: callout
+-   These are all mathematical operators.
+:::
+
+------------------------------------------------------------------------
+
+## Data overview functions
+
+::: callout-note
+## Functions
+
+-   `class()` - It provides just the class of the specified object.
+-   `str()` - It shows you the type of content in each column.
+-   `glipmse()` - While still detailed, it is easier to glance through than str().
+:::
+
+------------------------------------------------------------------------
+
+## Graph functions
+
+`ggplot()` is the function that will allow you to plot your datasets.
+
+Now, in order to get a plot you should think about three main components:
+
+::: {style="text-align: center;"}
+**Data + Aesthetics + Geometry**</span>
+:::
+
+::: callout
+-   **Data** is a data frame you want to use (you can write it inside the ggplot() function of you can directly pipe ggplot() from your dataset.
+-   **Aesthetics** is used to indicate x and y variables and it can also be used to control the color of the plot.
+    -   `aes()`
+-   **Geometry** refers totype of plot you want to make:
+    -   `geom_boxplot()`
+    -   `geom_point()`
+    -   `geom_line()`
+    -   `geom_histogram()`
+    -   `geom_jitter()`
+:::
+
+Here you can see two examples of how to do a plot (one with pipe operator and one without):
+
+```{r}
+#| include: false  
+library(tidyverse)
+library(here) 
+rodents <- read_tsv (here("data","rodents_full.txt"))
+```
+
+```{r}
+#| warning: false
+ggplot(rodents) + aes(x= species_id, y=hindfoot_length) + geom_boxplot()
+
+rodents |> 
+  ggplot() + aes(x= species_id, y=hindfoot_length) + geom_boxplot()
+```
+
+### Further Graph functions
+
+::: callout-note
+## Functions
+
+-   `facet_wrap()` - Allows for the visualization of individual categories in their own graph.
+-   `labs()` - Change axis labels and legend titles.
+-   `scale_x_continous() / scale_y_continous()` - default scales for continuous x and y aesthetics, which can be transform these axes.
+-   `theme()` - Modify a single plot's theme.
+-   `theme_update()` - Modify the active theme, to affect all subsequent plots.
+-   `theme_minimal()` - Applies a simplified theme of the plot, with no background shading.
+-   `view()` - Allows you to display your data.
+:::

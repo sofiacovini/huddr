@@ -1,0 +1,483 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hudd-R book",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\nWTH\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "2  Using R and R Studio in a web browser",
+    "section": "",
+    "text": "2.1 Four easy steps\nIf you are unable to install R and R Studio on your computer or tablet, or if you just want to practice but do not have your computer with you, there is a simple solution for that.\nYou can easily access a free cloud version of R Studio and sign up for a free account that will allow you to to run R Studio in any web browser and on any computer without the need to install RTools, Xcode, R or R Studio.",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using R and R Studio in a web browser</span>"
+    ]
+  },
+  {
+    "objectID": "installation.html#four-easy-steps",
+    "href": "installation.html#four-easy-steps",
+    "title": "2  Using R and R Studio in a web browser",
+    "section": "",
+    "text": "Follow the link https://posit.cloud/.\nGet started.\nChoose a plan (there is a free option).\nSign up with your email address.",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using R and R Studio in a web browser</span>"
+    ]
+  },
+  {
+    "objectID": "installation.html#creating-an-r-project",
+    "href": "installation.html#creating-an-r-project",
+    "title": "2  Using R and R Studio in a web browser",
+    "section": "2.2 Creating an R Project",
+    "text": "2.2 Creating an R Project\nNow that you have successfully created your account simply go to New Project and create a New R Studio Project:",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using R and R Studio in a web browser</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "3  Set up RStudio",
+    "section": "",
+    "text": "3.1 Set up project structure for the module\nFinally, install the required packages.",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Set up RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html#set-up-project-structure-for-the-module",
+    "href": "setup.html#set-up-project-structure-for-the-module",
+    "title": "3  Set up RStudio",
+    "section": "",
+    "text": "Open R Studio.\nSelect “File → New project” then, in the window that appears, select “New directory”, then again select “New project”.\nIn the form that appears, under “Directory name:”, give your project directory a useful name (I suggest a pattern modulecode_year - e.g. SIB2001_2223 - remember, the name must not have spaces!)\nUnder “Create a project under subdirectory of:” select a convenient place on your computer (if you are doing this on a university computer, the location of your project directory will be somewhere on the OneDrive).\nClick “Create Project”. R Studio will create your project folder and refresh the main window.\nIn the R Studio bottom-right panel, click “New Folder” and create three folders: “code”, “data” and “output” (these are three separate operations).",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Set up RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html#install-required-packages-for-your-work",
+    "href": "setup.html#install-required-packages-for-your-work",
+    "title": "3  Set up RStudio",
+    "section": "3.2 Install required packages for your work",
+    "text": "3.2 Install required packages for your work\n\nSelect menu “File → New File → R Notebook”. At this point you may see a prompt for installation of certain packages. Agree to the installation.\nOnce the installation from the previous point end, go to the panel on the left or bottom-left (called “Console”), copy-paste the following code and press Enter: install.packages(c(\"quarto\", \"tidyverse\", \"here\", \"rstatix\", \"palmerpenguins\")). If you don’t see the “Console” panel, go to menu “View → Move Focus to Console”.\nIt will take up to several minutes for all the packages to be downloaded and installed. There will be a lot of red text scrolling through the window, but this is all normal. Any actual errors will terminate the installation. If this happens, please contact me and include a legible screenshot with the error message or copy-paste it into email or a Teams message.",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Set up RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html#adjust-the-interface-and-code-options",
+    "href": "setup.html#adjust-the-interface-and-code-options",
+    "title": "3  Set up RStudio",
+    "section": "3.3 Adjust the interface and code options",
+    "text": "3.3 Adjust the interface and code options\n\nSelect manu “Tools → Global Options…” and then uncheck “Restore .RData into workspace at startup” and set “Save workspace to .RData on exit” to “Never”.\nThen, select the section “Code” on the left side of the window and select the option “Use native pipe operator”\nConfirm by clicking “OK” (in the bottom right corder of the window)\n\nYou are now ready: you can now follow all the code that we do in the class and in the other resources mentioned in the section “Information”.",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Set up RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "posit_cloud.html",
+    "href": "posit_cloud.html",
+    "title": "4  Use RStudio in a browser",
+    "section": "",
+    "text": "4.1 Use RStudio in a browser\nIf you cannot install R and R Studio on your computer or tablet, or you want to practice but don’t have your computer with you, the company that makes R Studio also makes a cloud version of it, available for free at https://rstudio.cloud/ . You need to sign up for a free account (allowing you to use it for 25 hours per month) and you will be able to run R Studio in a web browser (any web browser, on any computer) without installing R or R Studio.\nOnce you sign up and the rstudio.cloud opens in the browser, click “New Project” on the right and enter a new name for it (sib2001). Finally, in the panel on the left or bottom-left (called “Console”), copy-paste the following code and press Enter: install.packages(c(\"tidyverse\", \"here\", \"rstatix\", \"palmerpenguins\")).\nIt will take up to several minutes for all the packages to be downloaded and installed. You may be asked a question during the installation, to which you should agree. There will be a lot of red text scrolling through the window, but this is all normal. Any actual errors will terminate the installation. If this happens, please contact me. When the installation is over, you are ready: you can now follow all the code we do in the class and in the other resources mentioned in the section “Information” on Brightspace.",
+    "crumbs": [
+      "Part 1: Preparations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Use RStudio in a browser</span>"
+    ]
+  },
+  {
+    "objectID": "loading_your_data.html",
+    "href": "loading_your_data.html",
+    "title": "5  Loading and Installing Packages",
+    "section": "",
+    "text": "5.1 1. Loading and Installing Packages\nThe first step after you create a document in R should always be loading all the required packages (and installing them if needed).\ninstall.packages(\"rstatix\")\nOnce you have installed a package it will not be immediately available for you to use, but you’ll have to load it by using the library() function as in the example below:\nlibrary(tidyverse)\nlibrary(here)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Loading and Installing Packages</span>"
+    ]
+  },
+  {
+    "objectID": "loading_your_data.html#loading-and-installing-packages",
+    "href": "loading_your_data.html#loading-and-installing-packages",
+    "title": "5  Loading and Installing Packages",
+    "section": "",
+    "text": "What is a package? You should think of a package as a collection of functions, data and help files that you can download and install in R.\nYou can do this by using the function install.packages() and always remember to put the name of the package in quotation marks as in the example below:\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAlways start a quarto document by loading tidyverse and here",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Loading and Installing Packages</span>"
+    ]
+  },
+  {
+    "objectID": "loading_your_data.html#loading-your-data",
+    "href": "loading_your_data.html#loading-your-data",
+    "title": "5  Loading and Installing Packages",
+    "section": "5.2 2. Loading your data",
+    "text": "5.2 2. Loading your data\nThe second step should be to load your data into R (otherwise you’ll have nothing to work with). To do this you first have to check what type of file your data set is (is it .txt, .csv, .xlsx?). Depending on the type of file you have is the function that you are going to use:\n\n\nread_csv() reads comma separated files\nread_csv2() reads semicolon separated files\nread_tsv() reads tab separated files\nread_xlsx reads excel files (for this function you’ll need to load library(readxl))\nread_delim() reads files with any delimiter\n\n\nNow that you know which function to use, you’ll have to follow three easy steps to load your dataset:\n\nName the data and input an arrow signing to the data &lt;-\nUse the relevant function for your file type\nUse function here to tell R where you file is saved and what’s the name (Remember to always save you file in the data folder!)\n\nHere’s and example for you:\n\nsquirrels &lt;- read_csv(here(\"data\", \"squirrels.csv\"))\n\nIf you want to use read_delim() you’ll need to specify what delimiter you want to use (e.g. delim = “;”)\n\nsquirrels &lt;- read_delim (here(\"data\", \"squirrels.csv\"), delim = \";\")\nsquirrels",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Loading and Installing Packages</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions.html",
+    "href": "basic_functions.html",
+    "title": "6  Basic R functions",
+    "section": "",
+    "text": "6.1 Joining functions",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic R functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions.html#joining-functions",
+    "href": "basic_functions.html#joining-functions",
+    "title": "6  Basic R functions",
+    "section": "",
+    "text": "Functions\n\n\n\n\nleft_join() - Keeps all the values from the left table and matching rows from the right table.\nright_join() - Keeps all the values from the right table and matching rows from the left table.\ninner_join() - Keeps all values that have matching keys in both tables.\nfull_join() - Keeps all values from both tables.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic R functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions.html#pivot-functions",
+    "href": "basic_functions.html#pivot-functions",
+    "title": "6  Basic R functions",
+    "section": "6.2 Pivot functions",
+    "text": "6.2 Pivot functions\n\n\n\n\n\n\nFunctions\n\n\n\n\npivot_longer() - Allows you to lengthen your data set from a wide format to a long format by reducing the number of columns and increasing the number of rows.\npivot_wider() - Allows you to widen your data set from a long format to a wide format by reducing the number of rows and increasing the number of columns.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic R functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions.html#useful-operators",
+    "href": "basic_functions.html#useful-operators",
+    "title": "6  Basic R functions",
+    "section": "6.3 Useful operators",
+    "text": "6.3 Useful operators\n|&gt; or %\\&gt;%\n\n\n\n\n\n\n\nThis is a pipe operator that allows you to apply multiple functions to your data set in a chain like sequence.\nYou can type this operator by pressing: shift + control + M\n\n\n\n\nHere you can see an example of how to use the pipe operator to chain different functions:\n\nrodents |&gt; \n  filter(species_id==\"NL\") |&gt; \n  select(species_id, hindfoot_length, sex)\n\n%in%\n\n\n\n\n\n\n\nThis is a logical operator that allows you to check if an element from one vector is present in another vector.\n\n\n\n\n!\n\n\n\n\n\n\n\nThis is a negation operator, which allows you to tell a function to do the opposite.\n\n\n\n\nThis is an example of how you can oppose the filter() in order to filter out variables:\n\nrodents |&gt; \n  filter(!species_id==\"NL\")\n\n+, -, log(), *, /\n\n\n\n\n\n\n\nThese are all mathematical operators.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic R functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions.html#data-overview-functions",
+    "href": "basic_functions.html#data-overview-functions",
+    "title": "6  Basic R functions",
+    "section": "6.4 Data overview functions",
+    "text": "6.4 Data overview functions\n\n\n\n\n\n\nFunctions\n\n\n\n\nclass() - It provides just the class of the specified object.\nstr() - It shows you the type of content in each column.\nglipmse() - While still detailed, it is easier to glance through than str().",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic R functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions.html#graph-functions",
+    "href": "basic_functions.html#graph-functions",
+    "title": "6  Basic R functions",
+    "section": "6.5 Graph functions",
+    "text": "6.5 Graph functions\nggplot() is the function that will allow you to plot your datasets.\nNow, in order to get a plot you should think about three main components:\n\nData + Aesthetics + Geometry\n\n\n\n\n\n\n\n\nData is a data frame you want to use (you can write it inside the ggplot() function of you can directly pipe ggplot() from your dataset.\nAesthetics is used to indicate x and y variables and it can also be used to control the color of the plot.\n\naes()\n\nGeometry refers totype of plot you want to make:\n\ngeom_boxplot()\ngeom_point()\ngeom_line()\ngeom_histogram()\ngeom_jitter()\n\n\n\n\n\nHere you can see two examples of how to do a plot (one with pipe operator and one without):\n\nggplot(rodents) + aes(x= species_id, y=hindfoot_length) + geom_boxplot()\n\n\n\n\n\n\n\nrodents |&gt; \n  ggplot() + aes(x= species_id, y=hindfoot_length) + geom_boxplot()\n\n\n\n\n\n\n\n\n\n6.5.1 Further Graph functions\n\n\n\n\n\n\nFunctions\n\n\n\n\nfacet_wrap() - Allows for the visualization of individual categories in their own graph.\nlabs() - Change axis labels and legend titles.\nscale_x_continous() / scale_y_continous() - default scales for continuous x and y aesthetics, which can be transform these axes.\ntheme() - Modify a single plot’s theme.\ntheme_update() - Modify the active theme, to affect all subsequent plots.\ntheme_minimal() - Applies a simplified theme of the plot, with no background shading.\nview() - Allows you to display your data.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic R functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html",
+    "href": "basic_functions_extended.html",
+    "title": "7  A bit more about basic functions",
+    "section": "",
+    "text": "7.1 Filter\nThe filter() function allows you to pick rows in a data set. To use this function you simply need to specify the requirement/condition by which you want to filter your data.\nIn this example you can see both ways to use the filter() function in a data set:\n# Filter rodents data set for variables that are of the NL species.\nfilter(rodents, species_id==\"NL\")\n\nrodents |&gt; \n  filter(species_id==\"NL\")",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Filter",
+    "href": "basic_functions_extended.html#Filter",
+    "title": "7  A bit more about basic functions",
+    "section": "",
+    "text": "You do this by writing:\n\n\n\nfilter(data set name, column name == condition you want to filter)\n\n\n\n\n\n7.1.1 Useful filter functions and parameters\n\n\nis.na() - Allows you to check for missing values.\nc() - Allows you to combine different filtering variables.\nna.rm = TRUE - This parameter instructs functions to ignore missing values.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Select",
+    "href": "basic_functions_extended.html#Select",
+    "title": "7  A bit more about basic functions",
+    "section": "7.2 Select",
+    "text": "7.2 Select\nThe select() function allows you to pick/keep specific columns from a data set.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nselect(data set name, column name/s)\n\n\nIn this example you can see both ways to use the select() function in a data set:\n\n# Select the species_id column from the rodents data set.\nselect(rodents, species_id)\n\nrodents |&gt; \n  select(species_id)\n\n\n7.2.1 Useful select functions\n\n\nc() - Allows you to combine different selections.\nstarts_with() - Allows you to select variables that start with a specific prefix.\nends_with() - Allows you to select variables that end with a specific suffix\ncontains() - Allows you to select variables that contain a specific string.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Count",
+    "href": "basic_functions_extended.html#Count",
+    "title": "7  A bit more about basic functions",
+    "section": "7.3 Count",
+    "text": "7.3 Count\nThe count() function counts the number of occurrences of all distinct elements in a column.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ncount(data set name, column name)\n\n\nIn this example you can see both ways to use the count() function in a data set:\n\n# Select the species_id column from the rodents data set.\ncount(rodents, species_id)\n\nrodents |&gt; \n  count(species_id)\n\n\n7.3.1 Useful count parameters and functions\n\n\nsort = TRUE/FALSE - This parameters dictates the order in which the variables will be arranged, TRUE will order the counts in a descending order, wile FALSE will order the counts in an ascending order.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Mutate",
+    "href": "basic_functions_extended.html#Mutate",
+    "title": "7  A bit more about basic functions",
+    "section": "7.4 Mutate",
+    "text": "7.4 Mutate\nThe mutate() function allows you to create and modify columns from a data set. - It can create new columns as functions of existing variables.\n\nIt can modify existing columns.\nIt can delete columns by setting them to NULL.\n\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nmutate(data set name, new/existing column name = function/expression)\n\n\n\n7.4.1 Useful mutate functions\n\n\n+, -, log(), *, / - Mathematical opperators\nifelse() - This function will return one value if a condition is TRUE and another if FALSE.\ncase_when() - This function allows you to evaluate multiple conditions and assign them individual values.\n\n\nIn this examples you can see different ways you can use the mutate() function in a data set:\n\n# Use mutate to create a new column that will show a 1 for females and a 2 for males\nrodents |&gt; \n  mutate(new_column = case_when(sex == \"F\" ~ 1, sex == \"M\" ~ 2))\n\n# Use mutate to create a new weight_kg column that converts the values on the weight column (in grams) into kilograms by dividing them\nrodents |&gt; \n  mutate(wight_kg=weight/1000)\n\n# Use mutate to set the delete the hindfoot_length column\nrodents |&gt; \n  mutate(hindfoot_length = NULL)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Arrange",
+    "href": "basic_functions_extended.html#Arrange",
+    "title": "7  A bit more about basic functions",
+    "section": "7.5 Arrange",
+    "text": "7.5 Arrange\nThe arrange() function allows for the ordering of the data by different variables. - If you input multiple columns they will be sorted hierarchically.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\narrange(data set name, column name/s)\n\n\nIn this example you can see both ways to use the arrange() function in a data set:\n\n#Arrange the rows so that they sorted by species_id (ascending) and then by sex (ascending) \narrange(rodents, species_id, sex)\n\nrodents |&gt; \n  arrange(species_id, sex)\n\n\n7.5.1 Useful arrange functions\n\ndesc() - Allows you to sort in descending order as the default order of the arrange() funcrion is ascending.\n\n\nrodents |&gt; \n  arrange(desc(year))",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Group_by",
+    "href": "basic_functions_extended.html#Group_by",
+    "title": "7  A bit more about basic functions",
+    "section": "7.6 Group_by",
+    "text": "7.6 Group_by\nThe group_by() function uses an existing table to form a grouped table by splitting the data sate based on one or more variables.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ngroup_by(data set name, column name/s)\n\n\nIn this example you can see both ways to use the group_by() function in a data set:\n\n# Group the data set by species_id\ngroup_by(rodents, species_id)\n\nrodents |&gt; \n  group_by(species_id)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Summarise",
+    "href": "basic_functions_extended.html#Summarise",
+    "title": "7  A bit more about basic functions",
+    "section": "7.7 Summarise",
+    "text": "7.7 Summarise\nThe summarise() function allows you to calculate summary statistics and is usually used on grouped data produced by group_by(), as it creates one row for each combination of grouping variables.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nsummarise(data set name, new column name = function(column name))\n\n\n\n7.7.1 Useful summary functions and parameters\n\nmean()\nmedian()\nsd()\nmin()\nmax()\nn()\nn_distinct()\nna.rm = TRUE - This parameter instructs functions to ignore missing values.\n\nIn this example you can see both ways to use the summarise() function in a data set:\n\n# Take the mean hindfoot length\nsummarise(rodents, mean_hindfoot_length = mean(hindfoot_length, na.rm = TRUE))\n\nrodents |&gt; \n  summarise(mean_hindfoot_length = mean(hindfoot_length, na.rm = TRUE))",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Tibble",
+    "href": "basic_functions_extended.html#Tibble",
+    "title": "7  A bit more about basic functions",
+    "section": "7.8 Tibble",
+    "text": "7.8 Tibble\nThe tibble() function allows you to create new data frames.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ntibble(data set name, column name 1 = variables, comuln name 2 = variables, …)\n\n\n\n7.8.1 Useful tibble functions\n\n\nc() - Allows you to combine different selections.\n\n\n\ntibble(\n  Teams = c(\"Blue\", \"Red\", \"Purple\"),\n  Score = c(100, 85, 99))\n\n# A tibble: 3 × 2\n  Teams  Score\n  &lt;chr&gt;  &lt;dbl&gt;\n1 Blue     100\n2 Red       85\n3 Purple    99",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_functions_extended.html#Drop_na",
+    "href": "basic_functions_extended.html#Drop_na",
+    "title": "7  A bit more about basic functions",
+    "section": "7.9 Drop_na",
+    "text": "7.9 Drop_na\nThe drop_na() function allows you to to drop all the rows containing missing values.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ndrop_na(data set name, column name)\n\n\nIn this example you can see both ways to use the drop_na() function in a data set:\n\n# Drop all the variables that have missing values in the hindfoot length column\ndrop_na(rodents, hindfoot_length)\n\nrodents |&gt; \n  drop_na(hindfoot_length)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>A bit more about basic functions</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html",
+    "href": "basic_statistics.html",
+    "title": "8  Descriptive statistics",
+    "section": "",
+    "text": "8.1 T-tests\nThe t_test() function allows you to performs one and two sample t-tests.",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#t-tests",
+    "href": "basic_statistics.html#t-tests",
+    "title": "8  Descriptive statistics",
+    "section": "",
+    "text": "You do this by writing:\n\n\n\nt_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n8.1.1 Useful parameters\n\n\npaired = TRUE/FALSE - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.\nvar.equal = TURE/FALSE - This parameter indicates whether you want to treat the two variances as equal using the pooled variance (TRUE), or to use the Welch (or Satterthwaite) method to approximate the degrees of freedom (FALSE).\nalternative = - This parameter specifies the alternative hypothesis and can be either \"two.sided\" (default), \"greater\" or \"less\".\nconf.level = - This parameter specifies the confidence level.\nmu = - This parameter specifies the null hypothesis mean against which to test your sample mean.\n\n\nHere you can see an example of how to perform different t-tests using the t_test() function with different parameters:\n\n# One-sample test\nrodents |&gt; \nt_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nt_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nt_test(weight~sex, paired = TRUE)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#shapiro-wilk-normality-test",
+    "href": "basic_statistics.html#shapiro-wilk-normality-test",
+    "title": "8  Descriptive statistics",
+    "section": "8.2 Shapiro-Wilk Normality Test",
+    "text": "8.2 Shapiro-Wilk Normality Test\nThe shapiro_test() function allows you to performs Shapiro-Wilk test of normality.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nshapiro_test(data set name, column names)\n\n\nHere you can see an example of how to use the shapiro_test() function:\n\n# One-sample test\nrodents |&gt; \nwilcox_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nwilcox_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nwilcox_test(weight~sex, paired = TRUE)\n\n# Shapiro Wilk normality test for one variable\niris %&gt;% shapiro_test(Sepal.Length)\n\n# Shapiro Wilk normality test for two variables\niris %&gt;% shapiro_test(Sepal.Length, Petal.Width)\n\n# Multivariate normality test\nmshapiro_test(iris[, 1:3])",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#wilcoxon-tests",
+    "href": "basic_statistics.html#wilcoxon-tests",
+    "title": "8  Descriptive statistics",
+    "section": "8.3 Wilcoxon Tests",
+    "text": "8.3 Wilcoxon Tests\nThe wilcox_test function allows you to perform one and two sample Wilcoxon tests.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nwilcox_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n8.3.1 Useful parameters\n\n\npaired = TRUE/FALSE - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.\nalternative = - This parameter specifies the alternative hypothesis and can be either \"two.sided\" (default), \"greater\" or \"less\".\nconf.level = - This parameter specifies the confidence level.\nmu = - This parameter specifies the null hypothesis mean against which to test your sample mean.\n\n\nHere you can see an example of how to use the wilcox_test() function with different parameters:\n\n# One-sample test\nrodents |&gt; \nwilcox_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nwilcox_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nwilcox_test(weight~sex, paired = TRUE)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#kruskal-wallis-test",
+    "href": "basic_statistics.html#kruskal-wallis-test",
+    "title": "8  Descriptive statistics",
+    "section": "8.4 Kruskal-Wallis Test",
+    "text": "8.4 Kruskal-Wallis Test\nThe kruskal_test() function allows you to perform Kruskal-Wallis rank sum test.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nkruskal_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\nHere you can see an example of how to use the kruskal_test() function:\n\nrodents |&gt; \nkruskal_test(weight~sex)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#levenes-test",
+    "href": "basic_statistics.html#levenes-test",
+    "title": "8  Descriptive statistics",
+    "section": "8.5 Levene’s Test",
+    "text": "8.5 Levene’s Test\nThe levene_test() function allows you to perform Levene’s test assesses whether the variances of two or more groups are equal.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nlevene_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n8.5.1 Useful parameters\n\n\ncenter = - This parameter specifies the center of each group, either mean (original Levene’s test) or median.\n\n\nHere you can see an example of how to use the levene_test() function with different parameters:\n\nrodents |&gt; \nlevene_test(weight~sex)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#anova-test",
+    "href": "basic_statistics.html#anova-test",
+    "title": "8  Descriptive statistics",
+    "section": "8.6 Anova Test",
+    "text": "8.6 Anova Test\nThe anova_test() function allows you to perform different types of ANOVA tests.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nanova_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\nHere you can see an example of how to use the anova_test() function:\n\n# One-way ANOVA test\nrodents |&gt; \nanova_test(weight~sex)\n\n# Two-way ANOVA test\nrodents |&gt; \nanova_test(weight~sex*genus)",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#chi-squared-test",
+    "href": "basic_statistics.html#chi-squared-test",
+    "title": "8  Descriptive statistics",
+    "section": "8.7 Chi-squared Test",
+    "text": "8.7 Chi-squared Test\nThe chisq_test() function allows you to perform chi-squared tests (Goodness-of-Fit Test and Test for Independence) to assess whether there is a significant correlation between categorical variables.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nchisq_test(data set name, column name (numeric variable))\n\n\n\n8.7.1 Useful parameters\n\n\np = - This parameter specifies the vector of expected probabilities, which have to be of the same length as x.\n\n\nHere you can see an example of how to use the chisq_test() function with different parameters:\n\nrodents |&gt; \nchisq_test(weight)\n\n\n\n\n\n\n\n\nImportant\n\n\n\nTo use this all these function you will need to load library(rstatix)!!!",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "joining_functions_extended.html",
+    "href": "joining_functions_extended.html",
+    "title": "9  Joining functions",
+    "section": "",
+    "text": "The joining functions allow you to merge separate data sets based on matching keys.\n\nleft_join() - Keeps all the values from the left table and matching rows from the right table. All unmatched rows in the right table will be NA.\nright_join() - Keeps all the values from the right table and matching rows from the left table. All unmatched rows in the left table will be NA.\ninner_join() - Keeps all values that have matching keys in both tables.\nfull_join() - Keeps all values from both tables and all unmatched rows will be NA.\n\n\n9.0.1 Useful functions and parameters\n\n\nby - Specifies the key column/s to join on.\nc() - Allows you to combine different joining keys if they don’t have the same name.\n\n\n\n\n\n\n\n\nYou do this by writing:\n\n\n\njoining_function(left data set, right data set, by = “column name”)\njoining_function(left data set, right data set, by = c(left column name= right column name))\n\n\nHere you can see an example of how to join to data sets:\n\ninner_join(band_members, band_instruments, by = \"name\")\n\nleft_join(band_members, band_instruments, by = \"name\")\n\nright_join(band_members, band_instruments, by = \"name\")\n\nfull_join(band_members, band_instruments, by = \"name\")",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Joining functions</span>"
+    ]
+  },
+  {
+    "objectID": "pivot_functions_extended.html",
+    "href": "pivot_functions_extended.html",
+    "title": "10  Even more about pivot functions",
+    "section": "",
+    "text": "The pivot functions allow you to reshape your data sets, which is useful when preparing your data for analysis or visualization.\n\npivot_longer() - Allows you to lengthen your data set from a wide format to a long format by reducing the number of columns and increasing the number of rows.\npivot_wider() - Allows you to widen your data set from a long format to a wide format by reducing the number of rows and increasing the number of columns.\n\n\n\n\n\n\n\nYou do this by writing:\n\n\n\npivot_function(data set name, cols = (column name : column name), names_to = “name”, values_to = “value”)\n\n\n\ncols - The columns you want to pivot.\nnames_to - The new column name where you want all the variable names to go.\nvalues_to - The new column name where you want all the values to go.\n\nHere you can see an example of how you can use the pivot_longer() function in a data set:\n\npivot_longer(rodents, cols= (\"hindfoot_length\" : \"weight\"), names_to = \"type_measurement\", values_to = \"measurements\")\n\nrodents |&gt; \n  pivot_longer(cols= (\"hindfoot_length\" : \"weight\"), names_to = \"type_measurement\", values_to = \"measurements\")",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Even more about pivot functions</span>"
+    ]
+  },
+  {
+    "objectID": "web_exercises_11.html",
+    "href": "web_exercises_11.html",
+    "title": "11  Web exercises",
+    "section": "",
+    "text": "all functions:\n\n\n\nfunction\nwidget\ndescription\n\n\n\n\nfitb()\ntext box\nfill-in-the-blank question\n\n\nmcq()\npull-down menu\nmultiple choice question\n\n\ntorf()\npull-down menu\nTRUE or FALSE question\n\n\nlongmcq()\nradio buttons\nMCQs with long answers\n\n\nhide() and unhide()\nbutton\nsolution revealed when clicked\n\n\n\n\n11.0.1 Let’s start with normal Multiple Choice Question (mcq\nWhat function loads a package that is already on your computer? install.packageinstall.packageslibrarylibraries\n\n\n11.0.2 Select section\n[1] “”\nWhat function to pick columns in a dataset?\n[1] “”\nHow would you write a code that filters for column ‘x’ and ‘y’?\n\n\n11.0.3 filter with AND, OR %in%\n\nfilter can be used to group rows: TRUEFALSE\nWhich is the correct form?\n\n filter(species_id = 'GM') filter(species_id %in% c(DM, NL) filter(species_id == %in% c(DM, NL)\n\n\n\n\n11.0.4 NA\n\n\nClick here to see the solution\n\n\n\n[1] \"it is all of them\"\n\n\n\nWhich is the correct form?\n\n drop.na is.na na.rm All of the above\n\nWhat functions treat NA values?\n\n\n11.0.5 Vectors\n\nWhat class would be a Vector with numeric and character values\nvectors in R can only hold one type of data\ndbl and int are numeric vectors\nchr is a character vector\nthere is no logical vector in this tibble/dataframe\n\nHow would I write a vector that shows the number 28?\n\n\n\nSee a hint\n\na &lt;- 28",
+    "crumbs": [
+      "Part 2: R fundamentals",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Web exercises</span>"
+    ]
+  },
+  {
+    "objectID": "biomedical_science.html",
+    "href": "biomedical_science.html",
+    "title": "12  Biomedical Science topics",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Part 5: Topic-specific approaches",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Biomedical Science topics</span>"
+    ]
+  },
+  {
+    "objectID": "genomics.html",
+    "href": "genomics.html",
+    "title": "13  Genomics",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Part 5: Topic-specific approaches",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Genomics</span>"
+    ]
+  },
+  {
+    "objectID": "phylogenetics.html",
+    "href": "phylogenetics.html",
+    "title": "14  Phylogenetics",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Part 5: Topic-specific approaches",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Phylogenetics</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

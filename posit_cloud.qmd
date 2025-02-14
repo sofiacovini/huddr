@@ -1,0 +1,10 @@
+# Use RStudio in a browser
+
+## Use RStudio in a browser
+
+If you cannot install R and R Studio on your computer or tablet, or you want to practice but don't have your computer with you, the company that makes R Studio also makes a cloud version of it, available for free at [https://rstudio.cloud/](https://rstudio.cloud/) . You need to sign up for a free account (allowing you to use it for 25 hours per month) and you will be able to run R Studio in a web browser (any web browser, on any computer) without installing R or R Studio.
+
+Once you sign up and the rstudio.cloud opens in the browser, click "New Project" on the right and enter a new name for it (sib2001). Finally, in the panel on the left or bottom-left (called "Console"), copy-paste the following code and press Enter: `install.packages(c("tidyverse", "here", "rstatix", "palmerpenguins"))`.
+
+It will take up to several minutes for all the packages to be downloaded and installed. You may be asked a question during the installation, to which you should agree. There will be a lot of red text scrolling through the window, but this is all normal. Any actual errors will terminate the installation. If this happens, please contact me. When the installation is over, you are ready: you can now follow all the code we do in the class and in the other resources mentioned in the section "Information" on Brightspace.
+

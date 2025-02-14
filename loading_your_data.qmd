@@ -1,0 +1,63 @@
+# Loading and Installing Packages
+
+## 1. Loading and Installing Packages
+
+The first step after you create a document in R should always be loading all the required packages (and installing them if needed).
+
+-   **What is a package?** You should think of a package as a collection of functions, data and help files that you can download and install in R.
+
+-   You can do this by using the function `install.packages()` and always remember to put the name of the package in quotation marks as in the example below:
+
+```{r}
+#| eval: false
+install.packages("rstatix")
+```
+
+Once you have installed a package it will not be immediately available for you to use, but you'll have to load it by using the `library()` function as in the example below:
+
+```{r}
+#| eval: false
+library(tidyverse)
+library(here)
+```
+
+::: callout-important
+## Important
+
+Always start a quarto document by loading **tidyverse** and **here**
+:::
+
+## 2. Loading your data
+
+The second step should be to load your data into R (otherwise you'll have nothing to work with). To do this you first have to check what type of file your data set is (is it .txt, .csv, .xlsx?). Depending on the type of file you have is the function that you are going to use:
+
+<div>
+
+-   `read_csv()` reads comma separated files
+-   `read_csv2()` reads semicolon separated files
+-   `read_tsv()` reads tab separated files
+-   `read_xlsx` reads excel files (for this function you'll need to load `library(readxl)`)
+-   `read_delim()` reads files with any delimiter
+
+</div>
+
+Now that you know which function to use, you'll have to follow three easy steps to load your dataset:
+
+1.  Name the data and input an arrow signing to the data \<-
+2.  Use the relevant function for your file type
+3.  Use function here to tell R where you file is saved and what's the name **(Remember to always save you file in the data folder!)**
+
+Here's and example for you:
+
+```{r}
+#| eval: false
+squirrels <- read_csv(here("data", "squirrels.csv"))
+```
+
+If you want to use `read_delim()` you'll need to specify what delimiter you want to use (e.g. delim = ";")
+
+```{r}
+#| eval: false
+squirrels <- read_delim (here("data", "squirrels.csv"), delim = ";")
+squirrels
+```

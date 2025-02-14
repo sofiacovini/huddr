@@ -1,0 +1,26 @@
+# Even more about pivot functions
+
+The pivot functions allow you to reshape your data sets, which is useful when preparing your data for analysis or visualization.
+
+-   `pivot_longer()` - Allows you to lengthen your data set from a wide format to a long format by reducing the number of columns and increasing the number of rows.
+-   `pivot_wider()` - Allows you to widen your data set from a long format to a wide format by reducing the number of rows and increasing the number of columns.
+
+::: callout-tip
+## You do this by writing:
+
+pivot_function(data set name, cols = (column name : column name), names_to = "name", values_to = "value")
+:::
+
+-   `cols` - The columns you want to pivot.
+-   `names_to` - The new column name where you want all the variable names to go.
+-   `values_to` - The new column name where you want all the values to go.
+
+Here you can see an example of how you can use the `pivot_longer()` function in a data set:
+
+```{r}
+#| eval: false
+pivot_longer(rodents, cols= ("hindfoot_length" : "weight"), names_to = "type_measurement", values_to = "measurements")
+
+rodents |> 
+  pivot_longer(cols= ("hindfoot_length" : "weight"), names_to = "type_measurement", values_to = "measurements")
+```

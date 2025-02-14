@@ -1,0 +1,221 @@
+# Descriptive statistics
+
+::: callout-note
+## Functions
+
+-   `sum()` - The sum of the data.
+-   `mean()` - The mean of the data.
+-   `median()` - The median of the data.
+-   `var()` - The variance of the data.
+-   `sd()` - The standard deviation of the data.
+-   `summary()` - Gives you min, max, q1, q3, median, and mean of the data.
+-   `get_summary_stats()` - Gives you n, min, max, median, mean, q1, q3, iqr (interquartile range), mad (median absolute deviation), sd, se (standard error), and ci (95 percent confidence interval) of the data.
+:::
+
+------------------------------------------------------------------------
+
+## T-tests
+
+The `t_test()` function allows you to performs one and two sample t-tests.
+
+::: callout-tip
+## You do this by writing:
+
+t_test(data set name, column name (numeric variable) \~ column name (grouping variable))
+:::
+
+### Useful parameters
+
+> -   `paired = TRUE/FALSE` - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.
+> -   `var.equal = TURE/FALSE` - This parameter indicates whether you want to treat the two variances as equal using the pooled variance (TRUE), or to use the Welch (or Satterthwaite) method to approximate the degrees of freedom (FALSE).
+> -   `alternative =` - This parameter specifies the alternative hypothesis and can be either `"two.sided"` (default), `"greater"` or `"less"`.
+> -   `conf.level =` - This parameter specifies the confidence level.
+> -   `mu =` - This parameter specifies the null hypothesis mean against which to test your sample mean.
+
+Here you can see an example of how to perform different t-tests using the `t_test()` function with different parameters:
+
+```{r}
+#| eval: false
+# One-sample test
+rodents |> 
+t_test(weight~sex, mu = 0)
+
+# Two-samples unpaired test
+rodents |> 
+t_test(weight~sex)
+
+# Two-samples paired test
+rodents |>  
+t_test(weight~sex, paired = TRUE)
+```
+
+------------------------------------------------------------------------
+
+## Shapiro-Wilk Normality Test
+
+The `shapiro_test()` function allows you to performs Shapiro-Wilk test of normality.
+
+::: callout-tip
+## You do this by writing:
+
+shapiro_test(data set name, column names)
+:::
+
+Here you can see an example of how to use the `shapiro_test()` function:
+
+```{r}
+#| eval: false
+# One-sample test
+rodents |> 
+wilcox_test(weight~sex, mu = 0)
+
+# Two-samples unpaired test
+rodents |> 
+wilcox_test(weight~sex)
+
+# Two-samples paired test
+rodents |>  
+wilcox_test(weight~sex, paired = TRUE)
+
+# Shapiro Wilk normality test for one variable
+iris %>% shapiro_test(Sepal.Length)
+
+# Shapiro Wilk normality test for two variables
+iris %>% shapiro_test(Sepal.Length, Petal.Width)
+
+# Multivariate normality test
+mshapiro_test(iris[, 1:3])
+```
+
+------------------------------------------------------------------------
+
+## Wilcoxon Tests
+
+The `wilcox_test` function allows you to perform one and two sample Wilcoxon tests.
+
+::: callout-tip
+## You do this by writing:
+
+wilcox_test(data set name, column name (numeric variable) \~ column name (grouping variable))
+:::
+
+### Useful parameters
+
+> -   `paired = TRUE/FALSE` - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.
+> -   `alternative =` - This parameter specifies the alternative hypothesis and can be either `"two.sided"` (default), `"greater"` or `"less"`.
+> -   `conf.level =` - This parameter specifies the confidence level.
+> -   `mu =` - This parameter specifies the null hypothesis mean against which to test your sample mean.
+
+Here you can see an example of how to use the `wilcox_test()` function with different parameters:
+
+```{r}
+#| eval: false
+# One-sample test
+rodents |> 
+wilcox_test(weight~sex, mu = 0)
+
+# Two-samples unpaired test
+rodents |> 
+wilcox_test(weight~sex)
+
+# Two-samples paired test
+rodents |>  
+wilcox_test(weight~sex, paired = TRUE)
+```
+
+------------------------------------------------------------------------
+
+## Kruskal-Wallis Test
+
+The `kruskal_test()` function allows you to perform Kruskal-Wallis rank sum test.
+
+::: callout-tip
+## You do this by writing:
+
+kruskal_test(data set name, column name (numeric variable) \~ column name (grouping variable))
+:::
+
+Here you can see an example of how to use the `kruskal_test()` function:
+
+```{r}
+#| eval: false
+rodents |> 
+kruskal_test(weight~sex)
+```
+
+------------------------------------------------------------------------
+
+## Levene's Test
+
+The `levene_test()` function allows you to perform Levene's test assesses whether the variances of two or more groups are equal.
+
+::: callout-tip
+## You do this by writing:
+
+levene_test(data set name, column name (numeric variable) \~ column name (grouping variable))
+:::
+
+### Useful parameters
+
+> -   `center =` - This parameter specifies the center of each group, either `mean` (original Levene's test) or `median`.
+
+Here you can see an example of how to use the `levene_test()` function with different parameters:
+
+```{r}
+#| eval: false
+rodents |> 
+levene_test(weight~sex)
+```
+
+------------------------------------------------------------------------
+
+## Anova Test
+
+The `anova_test()` function allows you to perform different types of ANOVA tests.
+
+::: callout-tip
+## You do this by writing:
+
+anova_test(data set name, column name (numeric variable) \~ column name (grouping variable))
+:::
+
+Here you can see an example of how to use the `anova_test()` function:
+
+```{r}
+#| eval: false
+# One-way ANOVA test
+rodents |> 
+anova_test(weight~sex)
+
+# Two-way ANOVA test
+rodents |> 
+anova_test(weight~sex*genus)
+```
+
+## Chi-squared Test
+
+The `chisq_test()` function allows you to perform chi-squared tests (Goodness-of-Fit Test and Test for Independence) to assess whether there is a significant correlation between categorical variables.
+
+::: callout-tip
+## You do this by writing:
+
+chisq_test(data set name, column name (numeric variable))
+:::
+
+### Useful parameters
+
+> -   `p =` - This parameter specifies the vector of expected probabilities, which have to be of the same length as x.
+
+Here you can see an example of how to use the `chisq_test()` function with different parameters:
+
+```{r}
+#| eval: false
+rodents |> 
+chisq_test(weight)
+```
+
+------------------------------------------------------------------------
+
+::: callout-important
+To use this all these function you will need to load `library(rstatix)`!!!
+:::

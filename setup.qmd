@@ -1,0 +1,30 @@
+# Set up RStudio
+
+
+## Set up project structure for the module
+
+- Open R Studio.
+- Select "File → New project" then, in the window that appears, select "New directory", then again select "New project". 
+- In the form that appears, under "Directory name:", give your project directory a useful name (I suggest a pattern modulecode_year - e.g. SIB2001_2223 - remember, the name must not have spaces!)
+- Under "Create a project under subdirectory of:" select a convenient place on your computer (if you are doing this on a university computer, the location of your project directory will be somewhere on the OneDrive). 
+- Click "Create Project". R Studio will create your project folder and refresh the main window.
+- In the R Studio bottom-right panel, click "New Folder" and create three folders: "code", "data" and "output" (these are three separate operations).
+
+Finally, install the required packages.
+
+## Install required packages for your work
+
+- Select menu "File → New File → R Notebook". At this point you may see a prompt for installation of certain packages. Agree to the installation.
+- Once the installation from the previous point end, go to the panel on the left or bottom-left (called "Console"), copy-paste the following code and press Enter: `install.packages(c("quarto", "tidyverse", "here", "rstatix", "palmerpenguins"))`. If you don't see the "Console" panel, go to menu "View → Move Focus to Console".
+- It will take up to several minutes for all the packages to be downloaded and installed. There will be a lot of red text scrolling through the window, but this is all normal. Any actual errors will terminate the installation. If this happens, please contact me and include a legible screenshot with the error message or copy-paste it into email or a Teams message.
+
+## Adjust the interface and code options
+
+- Select manu "Tools → Global Options..." and then _uncheck_ "Restore .RData into workspace at startup" and set "Save workspace to .RData on exit" to "Never".
+- Then, select the section "Code" on the left side of the window and select the option "Use native pipe operator"
+- Confirm by clicking "OK" (in the bottom right corder of the window)
+
+
+You are now ready: you can now follow all the code that we do in the class and in the other resources mentioned in the section "Information".
+
+

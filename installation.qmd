@@ -1,0 +1,20 @@
+# Using R and R Studio in a web browser
+
+If you are unable to install R and R Studio on your computer or tablet, or if you just want to practice but do not have your computer with you, there is a simple solution for that.
+
+You can easily access a free cloud version of [R Studio](https://posit.cloud/) and sign up for a free account that will allow you to to run R Studio in any web browser and on any computer without the need to install RTools, Xcode, R or R Studio.
+
+## Four easy steps
+
+1.  Follow the link <https://posit.cloud/>.
+2.  Get started.
+3.  Choose a plan (there is a free option).
+4.  Sign up with your email address.
+
+![](images/signing_up.gif)
+
+## Creating an R Project
+
+Now that you have successfully created your account simply go to New Project and create a New R Studio Project:
+
+![](images/r_project.gif)

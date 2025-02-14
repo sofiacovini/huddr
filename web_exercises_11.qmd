@@ -1,0 +1,115 @@
+# Web exercises
+
+all functions:
+
+| function | widget | description |
+|:-----------------------|:-----------------------|:-----------------------|
+| [`fitb()`](https://psyteachr.github.io/webexercises/reference/fitb.html) | text box | fill-in-the-blank question |
+| [`mcq()`](https://psyteachr.github.io/webexercises/reference/mcq.html) | pull-down menu | multiple choice question |
+| [`torf()`](https://psyteachr.github.io/webexercises/reference/torf.html) | pull-down menu | TRUE or FALSE question |
+| [`longmcq()`](https://psyteachr.github.io/webexercises/reference/longmcq.html) | radio buttons | MCQs with long answers |
+| [`hide()`](https://psyteachr.github.io/webexercises/reference/hide.html) and [`unhide()`](https://psyteachr.github.io/webexercises/reference/unhide.html) | button | solution revealed when clicked |
+
+### Let's start with normal Multiple Choice Question (mcq
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(webexercises)
+library(tidyverse)
+library(here)
+rodents_full <- read_tsv(here("data", "rodents_full.txt"))
+# style_widgets(
+#   incorrect = "#983E82",
+#   correct = "#59935B",
+#   highlight = "#467AAC"
+# )
+```
+
+
+```{r results='asis', echo=FALSE}
+
+opts <- c("install.package", 
+            "install.packages", 
+            answer = "library", 
+            "libraries")
+q1 <- mcq(opts)
+
+cat("What function loads a package that is already on your computer?", q1) 
+
+```
+
+### Select section
+
+```{r, results='asis', echo=FALSE}
+
+fitb("select", ignore_case = TRUE)
+
+```
+
+What function to pick columns in a dataset?
+
+```{r, results='asis', echo=FALSE}
+
+
+fitb("select(x,y)", ignore_case = TRUE)
+
+```
+
+How would you write a code that filters for column 'x' and 'y'?
+
+### filter with AND, OR %in%
+
+::: {.webex-check .webex-box}
+filter can be used to group rows: `r torf(TRUE)`
+
+```{r, results='asis', echo = FALSE}
+optsf <- c(
+   "filter(species_id = 'GM')",
+   
+   answer = "filter(species_id %in% c(DM, NL)",
+   
+   "filter(species_id == %in% c(DM, NL)")
+
+cat("Which is the correct form?", longmcq(optsf))
+```
+:::
+
+### NA
+
+
+`r hide("Click here to see the solution")`
+
+```{r, echo = FALSE}
+"it is all of them" 
+```
+
+`r unhide()`
+```{r, results='asis', echo=FALSE}
+opts_p <- c(
+   "drop.na",
+   "is.na", 
+   "na.rm",
+   answer = "All of the above")
+cat("Which is the correct form?", longmcq(opts_p))
+```
+What functions treat NA values?
+
+### Vectors
+
+-   What class would be a Vector with numeric and character values
+
+-   *vectors in R can only hold one type of data*
+
+-   dbl and int are numeric vectors
+
+-   chr is a character vector
+
+-   there is no logical vector in this tibble/dataframe
+
+
+
+```         
+How would I write a vector that shows the number 28?
+```
+
+```{r, echo = TRUE, eval = FALSE, webex.hide = "See a hint"}
+a <- 28
+```

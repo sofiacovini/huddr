@@ -1,0 +1,267 @@
+# A bit more about basic functions
+
+## Filter {#Filter}
+
+The `filter()` function allows you to pick rows in a data set. To use this function you simply need to specify the requirement/condition by which you want to filter your data.
+
+::: callout-tip
+## You do this by writing:
+
+filter(data set name, column name == condition you want to filter)
+:::
+
+In this example you can see both ways to use the `filter()` function in a data set:
+
+```{r}
+#| include: false  
+library(tidyverse)
+library(here)
+
+rodents <- read_tsv(here("data", "rodents_full.txt"))
+```
+
+```{r}
+#| eval: false
+# Filter rodents data set for variables that are of the NL species.
+filter(rodents, species_id=="NL")
+
+rodents |> 
+  filter(species_id=="NL")
+```
+
+### Useful filter functions and parameters
+
+> -   `is.na()` - Allows you to check for missing values.
+> -   `c()` - Allows you to combine different filtering variables.
+> -   `na.rm = TRUE` - This parameter instructs functions to ignore missing values.
+
+------------------------------------------------------------------------
+
+## Select {#Select}
+
+The `select()` function allows you to pick/keep specific columns from a data set.
+
+::: callout-tip
+## You do this by writing:
+
+select(data set name, column name/s)
+:::
+
+In this example you can see both ways to use the `select()` function in a data set:
+
+```{r}
+#| eval: false
+# Select the species_id column from the rodents data set.
+select(rodents, species_id)
+
+rodents |> 
+  select(species_id)
+```
+
+### Useful select functions
+
+> -   `c()` - Allows you to combine different selections.
+> -   `starts_with()` - Allows you to select variables that start with a specific prefix.
+> -   `ends_with()` - Allows you to select variables that end with a specific suffix
+> -   `contains()` - Allows you to select variables that contain a specific string.
+
+------------------------------------------------------------------------
+
+## Count {#Count}
+
+The `count()` function counts the number of occurrences of all distinct elements in a column.
+
+::: callout-tip
+## You do this by writing:
+
+count(data set name, column name)
+:::
+
+In this example you can see both ways to use the `count()` function in a data set:
+
+```{r}
+#| eval: false
+# Select the species_id column from the rodents data set.
+count(rodents, species_id)
+
+rodents |> 
+  count(species_id)
+```
+
+### Useful count parameters and functions
+
+> -   `sort = TRUE/FALSE` - This parameters dictates the order in which the variables will be arranged, TRUE will order the counts in a descending order, wile FALSE will order the counts in an ascending order.
+
+------------------------------------------------------------------------
+
+## Mutate {#Mutate}
+
+The `mutate()` function allows you to create and modify columns from a data set. - It can create new columns as functions of existing variables.
+
+-   It can modify existing columns.
+-   It can delete columns by setting them to NULL.
+
+::: callout-tip
+## You do this by writing:
+
+mutate(data set name, new/existing column name = function/expression)
+:::
+
+### Useful mutate functions
+
+> -   `+`, `-`, `log()`, `*`, `/` - Mathematical opperators
+> -   `ifelse()` - This function will return one value if a condition is TRUE and another if FALSE.
+> -   `case_when()` - This function allows you to evaluate multiple conditions and assign them individual values.
+
+In this examples you can see different ways you can use the `mutate()` function in a data set:
+
+```{r}
+#| eval: false
+# Use mutate to create a new column that will show a 1 for females and a 2 for males
+rodents |> 
+  mutate(new_column = case_when(sex == "F" ~ 1, sex == "M" ~ 2))
+
+# Use mutate to create a new weight_kg column that converts the values on the weight column (in grams) into kilograms by dividing them
+rodents |> 
+  mutate(wight_kg=weight/1000)
+
+# Use mutate to set the delete the hindfoot_length column
+rodents |> 
+  mutate(hindfoot_length = NULL)
+
+```
+
+------------------------------------------------------------------------
+
+## Arrange {#Arrange}
+
+The `arrange()` function allows for the ordering of the data by different variables. - If you input multiple columns they will be sorted hierarchically.
+
+::: callout-tip
+## You do this by writing:
+
+arrange(data set name, column name/s)
+:::
+
+In this example you can see both ways to use the `arrange()` function in a data set:
+
+```{r}
+#| eval: false
+#Arrange the rows so that they sorted by species_id (ascending) and then by sex (ascending) 
+arrange(rodents, species_id, sex)
+
+rodents |> 
+  arrange(species_id, sex)
+```
+
+### Useful arrange functions
+
+> `desc()` - Allows you to sort in descending order as the default order of the `arrange()` funcrion is ascending.
+
+```{r}
+#| eval: false
+rodents |> 
+  arrange(desc(year))
+```
+
+------------------------------------------------------------------------
+
+## Group_by {#Group_by}
+
+The `group_by()` function uses an existing table to form a grouped table by splitting the data sate based on one or more variables.
+
+::: callout-tip
+## You do this by writing:
+
+group_by(data set name, column name/s)
+:::
+
+In this example you can see both ways to use the `group_by()` function in a data set:
+
+```{r}
+#| eval: false
+# Group the data set by species_id
+group_by(rodents, species_id)
+
+rodents |> 
+  group_by(species_id)
+```
+
+------------------------------------------------------------------------
+
+## Summarise {#Summarise}
+
+The `summarise()` function allows you to calculate summary statistics and is usually used on grouped data produced by `group_by()`, as it creates one row for each combination of grouping variables.
+
+::: callout-tip
+## You do this by writing:
+
+summarise(data set name, new column name = function(column name))
+:::
+
+### Useful summary functions and parameters
+
+-   `mean()`
+-   `median()`
+-   `sd()`
+-   `min()`
+-   `max()`
+-   `n()`
+-   `n_distinct()`
+-   `na.rm = TRUE` - This parameter instructs functions to ignore missing values.
+
+In this example you can see both ways to use the `summarise()` function in a data set:
+
+```{r}
+#| eval: false
+# Take the mean hindfoot length
+summarise(rodents, mean_hindfoot_length = mean(hindfoot_length, na.rm = TRUE))
+
+rodents |> 
+  summarise(mean_hindfoot_length = mean(hindfoot_length, na.rm = TRUE))
+```
+
+------------------------------------------------------------------------
+
+## Tibble {#Tibble}
+
+The `tibble()` function allows you to create new data frames.
+
+::: callout-tip
+## You do this by writing:
+
+tibble(data set name, column name 1 = variables, comuln name 2 = variables, ...)
+:::
+
+### Useful tibble functions
+
+> -   `c()` - Allows you to combine different selections.
+
+```{r}
+tibble(
+  Teams = c("Blue", "Red", "Purple"),
+  Score = c(100, 85, 99))
+```
+
+------------------------------------------------------------------------
+
+## Drop_na {#Drop_na}
+
+The `drop_na()` function allows you to to drop all the rows containing missing values.
+
+::: callout-tip
+## You do this by writing:
+
+drop_na(data set name, column name)
+:::
+
+In this example you can see both ways to use the `drop_na()` function in a data set:
+
+```{r}
+#| eval: false
+# Drop all the variables that have missing values in the hindfoot length column
+drop_na(rodents, hindfoot_length)
+
+rodents |> 
+  drop_na(hindfoot_length)
+```
