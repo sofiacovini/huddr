@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Loading and Installing Packages – Hudd-R book</title>
+<title>6&nbsp; Loading and Installing Packages – Hudd-R book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./basic_functions.html" rel="next">
-<link href="./posit_cloud.html" rel="prev">
+<link href="./base_r_vs_tidyverse.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./loading_your_data.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./loading_your_data.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./base_r_vs_tidyverse.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./loading_your_data.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -193,38 +193,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./base_r_vs_tidyverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Base R vs tidyverse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./loading_your_data.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Basic R functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic R functions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dealing_with_missing_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deadling with missing data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_functions_extended.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">A bit more about basic functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A bit more about basic functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./joining_functions_extended.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Joining functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Joining functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./pivot_functions_extended.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Even more about pivot functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Even more about pivot functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./web_exercises_11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Web exercises</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Web exercises</span></span></a>
   </div>
 </li>
       </ul>
@@ -241,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basic_statistics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Descriptive statistics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Descriptive statistics</span></span></a>
   </div>
 </li>
       </ul>
@@ -262,19 +274,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./biomedical_science.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Biomedical Science topics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Biomedical Science topics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./genomics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Genomics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genomics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./phylogenetics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Phylogenetics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Phylogenetics</span></span></a>
   </div>
 </li>
       </ul>
@@ -295,17 +307,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#loading-and-installing-packages" id="toc-loading-and-installing-packages" class="nav-link active" data-scroll-target="#loading-and-installing-packages"><span class="header-section-number">5.1</span> 1. Loading and Installing Packages</a></li>
-  <li><a href="#loading-your-data" id="toc-loading-your-data" class="nav-link" data-scroll-target="#loading-your-data"><span class="header-section-number">5.2</span> 2. Loading your data</a></li>
+  <li><a href="#loading-and-installing-packages" id="toc-loading-and-installing-packages" class="nav-link active" data-scroll-target="#loading-and-installing-packages"><span class="header-section-number">6.1</span> 1. Loading and Installing Packages</a></li>
+  <li><a href="#loading-your-data" id="toc-loading-your-data" class="nav-link" data-scroll-target="#loading-your-data"><span class="header-section-number">6.2</span> 2. Loading your data</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./loading_your_data.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./loading_your_data.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./base_r_vs_tidyverse.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./loading_your_data.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></h1>
 </div>
 
 
@@ -322,8 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="loading-and-installing-packages" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="loading-and-installing-packages"><span class="header-section-number">5.1</span> 1. Loading and Installing Packages</h2>
+<section id="loading-and-installing-packages" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="loading-and-installing-packages"><span class="header-section-number">6.1</span> 1. Loading and Installing Packages</h2>
 <p>The first step after you create a document in R should always be loading all the required packages (and installing them if needed).</p>
 <ul>
 <li><p><strong>What is a package?</strong> You should think of a package as a collection of functions, data and help files that you can download and install in R.</p></li>
@@ -351,8 +363,8 @@ Important
 </div>
 </div>
 </section>
-<section id="loading-your-data" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="loading-your-data"><span class="header-section-number">5.2</span> 2. Loading your data</h2>
+<section id="loading-your-data" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="loading-your-data"><span class="header-section-number">6.2</span> 2. Loading your data</h2>
 <p>The second step should be to load your data into R (otherwise you’ll have nothing to work with). To do this you first have to check what type of file your data set is (is it .txt, .csv, .xlsx?). Depending on the type of file you have is the function that you are going to use:</p>
 <div>
 <ul>
@@ -1008,13 +1020,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./posit_cloud.html" class="pagination-link" aria-label="Use RStudio in a browser">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Use RStudio in a browser</span></span>
+      <a href="./base_r_vs_tidyverse.html" class="pagination-link" aria-label="Base R vs tidyverse">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Base R vs tidyverse</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./basic_functions.html" class="pagination-link" aria-label="Basic R functions">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Basic R functions</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic R functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

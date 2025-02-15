@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Basic R functions – Hudd-R book</title>
+<title>8&nbsp; Deadling with missing data – Hudd-R book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./dealing_with_missing_data.html" rel="next">
-<link href="./loading_your_data.html" rel="prev">
+<link href="./basic_functions_extended.html" rel="next">
+<link href="./basic_functions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./base_r_vs_tidyverse.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./basic_functions.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic R functions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./base_r_vs_tidyverse.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./dealing_with_missing_data.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deadling with missing data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,13 +205,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basic_functions.html" class="sidebar-item-text sidebar-link active">
+  <a href="./basic_functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic R functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dealing_with_missing_data.html" class="sidebar-item-text sidebar-link">
+  <a href="./dealing_with_missing_data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deadling with missing data</span></span></a>
   </div>
 </li>
@@ -302,28 +302,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#joining-functions" id="toc-joining-functions" class="nav-link active" data-scroll-target="#joining-functions"><span class="header-section-number">7.1</span> Joining functions</a></li>
-  <li><a href="#pivot-functions" id="toc-pivot-functions" class="nav-link" data-scroll-target="#pivot-functions"><span class="header-section-number">7.2</span> Pivot functions</a></li>
-  <li><a href="#useful-operators" id="toc-useful-operators" class="nav-link" data-scroll-target="#useful-operators"><span class="header-section-number">7.3</span> Useful operators</a></li>
-  <li><a href="#data-overview-functions" id="toc-data-overview-functions" class="nav-link" data-scroll-target="#data-overview-functions"><span class="header-section-number">7.4</span> Data overview functions</a></li>
-  <li><a href="#graph-functions" id="toc-graph-functions" class="nav-link" data-scroll-target="#graph-functions"><span class="header-section-number">7.5</span> Graph functions</a>
-  <ul class="collapse">
-  <li><a href="#further-graph-functions" id="toc-further-graph-functions" class="nav-link" data-scroll-target="#further-graph-functions"><span class="header-section-number">7.5.1</span> Further Graph functions</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./base_r_vs_tidyverse.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./basic_functions.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic R functions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./base_r_vs_tidyverse.html">Part 2: R fundamentals</a></li><li class="breadcrumb-item"><a href="./dealing_with_missing_data.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deadling with missing data</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic R functions</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deadling with missing data</span></h1>
 </div>
 
 
@@ -340,240 +327,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Functions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><code>library()</code> - Loads packages into R.</li>
-<li><a href="./basic_functions_extended.html#filter"><code>filter()</code></a>- Allows you to retain/filter rows from a data set depending on the condition you want.</li>
-<li><a href="./basic_functions_extended.html#select"><code>select()</code></a> - Allows you to pick/keep specific columns from a data set.</li>
-<li><a href="./basic_functions_extended.html#count"><code>count()</code></a> - Counts the number of occurrences of all distinct elements in a column.</li>
-<li><a href="./basic_functions_extended.html#mutate"><code>mutate()</code></a> - Allows you to create and modify columns from a data set.</li>
-<li><a href="./basic_functions_extended.html#arrange"><code>arrange()</code></a> - Allows for the ordering of the data by different variables.</li>
-<li><a href="./basic_functions_extended.html#group_by"><code>group_by()</code></a> - Uses an existing table to form a grouped table by splitting the data sate based on one or more variables.</li>
-<li><a href="./basic_functions_extended.html#summarise"><code>summarise()</code></a> - Allows you to calculate summary statistics and is usually used on grouped data produced by <code>group_by()</code>, as it creates one row for each combination of grouping variables.</li>
-<li><a href="./basic_functions_extended.html#tibble"><code>tibble()</code></a> - Allows you to create new data frames.</li>
-<li><a href="./basic_functions_extended.html#drop_na"><code>drop_na()</code></a> - Allows you to to drop all the rows containing missing values.</li>
-</ul>
-</div>
-</div>
-<hr>
-<section id="joining-functions" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="joining-functions"><span class="header-section-number">7.1</span> Joining functions</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Functions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><code>left_join()</code> - Keeps all the values from the left table and matching rows from the right table.</li>
-<li><code>right_join()</code> - Keeps all the values from the right table and matching rows from the left table.</li>
-<li><code>inner_join()</code> - Keeps all values that have matching keys in both tables.</li>
-<li><code>full_join()</code> - Keeps all values from both tables.</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="pivot-functions" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="pivot-functions"><span class="header-section-number">7.2</span> Pivot functions</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Functions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><code>pivot_longer()</code> - Allows you to lengthen your data set from a wide format to a long format by reducing the number of columns and increasing the number of rows.</li>
-<li><code>pivot_wider()</code> - Allows you to widen your data set from a long format to a wide format by reducing the number of rows and increasing the number of columns.</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="useful-operators" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="useful-operators"><span class="header-section-number">7.3</span> Useful operators</h2>
-<p><code>|&gt;</code> or <code>%\&gt;%</code></p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<ul>
-<li>This is a pipe operator that allows you to apply multiple functions to your data set in a chain like sequence.</li>
-<li>You can type this operator by pressing: <strong>shift + control + M</strong></li>
-</ul>
-</div>
-</div>
-</div>
-<p>Here you can see an example of how to use the pipe operator to chain different functions:</p>
+<p>In summary, this book has no content whatsoever.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>rodents <span class="sc">|&gt;</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species_id<span class="sc">==</span><span class="st">"NL"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(species_id, hindfoot_length, sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>%in%</code></p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<ul>
-<li>This is a logical operator that allows you to check if an element from one vector is present in another vector.</li>
-</ul>
-</div>
-</div>
-</div>
-<p><code>!</code></p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<ul>
-<li>This is a negation operator, which allows you to tell a function to do the opposite.</li>
-</ul>
-</div>
-</div>
-</div>
-<p>This is an example of how you can oppose the filter() in order to filter <strong>out</strong> variables:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rodents <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>species_id<span class="sc">==</span><span class="st">"NL"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>+</code>, <code>-</code>, <code>log()</code>, <code>*</code>, <code>/</code></p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<ul>
-<li>These are all mathematical operators.</li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="data-overview-functions" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="data-overview-functions"><span class="header-section-number">7.4</span> Data overview functions</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Functions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><code>class()</code> - It provides just the class of the specified object.</li>
-<li><code>str()</code> - It shows you the type of content in each column.</li>
-<li><code>glipmse()</code> - While still detailed, it is easier to glance through than str().</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="graph-functions" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="graph-functions"><span class="header-section-number">7.5</span> Graph functions</h2>
-<p><code>ggplot()</code> is the function that will allow you to plot your datasets.</p>
-<p>Now, in order to get a plot you should think about three main components:</p>
-<div style="text-align: center;">
-<p><strong>Data + Aesthetics + Geometry</strong></p>
-</div>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<ul>
-<li><strong>Data</strong> is a data frame you want to use (you can write it inside the ggplot() function of you can directly pipe ggplot() from your dataset.</li>
-<li><strong>Aesthetics</strong> is used to indicate x and y variables and it can also be used to control the color of the plot.
-<ul>
-<li><code>aes()</code></li>
-</ul></li>
-<li><strong>Geometry</strong> refers totype of plot you want to make:
-<ul>
-<li><code>geom_boxplot()</code></li>
-<li><code>geom_point()</code></li>
-<li><code>geom_line()</code></li>
-<li><code>geom_histogram()</code></li>
-<li><code>geom_jitter()</code></li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-<p>Here you can see two examples of how to do a plot (one with pipe operator and one without):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(rodents) <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x=</span> species_id, <span class="at">y=</span>hindfoot_length) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="basic_functions_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rodents <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">aes</span>(<span class="at">x=</span> species_id, <span class="at">y=</span>hindfoot_length) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="basic_functions_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="further-graph-functions" class="level3" data-number="7.5.1">
-<h3 data-number="7.5.1" class="anchored" data-anchor-id="further-graph-functions"><span class="header-section-number">7.5.1</span> Further Graph functions</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Functions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><code>facet_wrap()</code> - Allows for the visualization of individual categories in their own graph.</li>
-<li><code>labs()</code> - Change axis labels and legend titles.</li>
-<li><code>scale_x_continous() / scale_y_continous()</code> - default scales for continuous x and y aesthetics, which can be transform these axes.</li>
-<li><code>theme()</code> - Modify a single plot’s theme.</li>
-<li><code>theme_update()</code> - Modify the active theme, to affect all subsequent plots.</li>
-<li><code>theme_minimal()</code> - Applies a simplified theme of the plot, with no background shading.</li>
-<li><code>view()</code> - Allows you to display your data.</li>
-</ul>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
 </div>
 </div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script>
@@ -1201,13 +963,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./loading_your_data.html" class="pagination-link" aria-label="Loading and Installing Packages">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Loading and Installing Packages</span></span>
+      <a href="./basic_functions.html" class="pagination-link" aria-label="Basic R functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Basic R functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./dealing_with_missing_data.html" class="pagination-link" aria-label="Deadling with missing data">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Deadling with missing data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./basic_functions_extended.html" class="pagination-link" aria-label="A bit more about basic functions">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">A bit more about basic functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
