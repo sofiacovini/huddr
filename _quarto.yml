@@ -2,7 +2,7 @@ project:
   type: book
 book:
   title: Hudd-R book
-  author: Fern Compston, Chantay Robinson Livingston, Sofia Covini Schob, Ana Salgado
+  author: Fern Compston, Chantay Robinson Livingston, Sofia Covini Schob, Layane Soufan, Ana Salgado
     Villa and Jarek Bryk
   date: '2025-02-14'
   chapters:
@@ -15,15 +15,18 @@ book:
     - posit_cloud.qmd
   - part: 'Part 2: R fundamentals'
     chapters:
+    - base_r_vs_tidyverse.qmd
     - loading_your_data.qmd
     - basic_functions.qmd
+    - dealing_with_missing_data.qmd
     - basic_functions_extended.qmd
-    - basic_statistics.qmd
     - joining_functions_extended.qmd
     - pivot_functions_extended.qmd
     - web_exercises_11.qmd
-  - part: 'Part 3: Functions and loops'
-  - part: 'Part 4: Statistical tests'
+  - part: 'Part 3: Statistical tests'
+    chapters:
+    - basic_statistics.qmd
+  - part: 'Part 4: Functions and loops'
   - part: 'Part 5: Topic-specific approaches'
     chapters:
     - biomedical_science.qmd

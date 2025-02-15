@@ -218,8 +218,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Filter",
-    "href": "basic_functions_extended.html#Filter",
+    "objectID": "basic_functions_extended.html#filter",
+    "href": "basic_functions_extended.html#filter",
     "title": "7  A bit more about basic functions",
     "section": "",
     "text": "You do this by writing:\n\n\n\nfilter(data set name, column name == condition you want to filter)\n\n\n\n\n\n7.1.1 Useful filter functions and parameters\n\n\nis.na() - Allows you to check for missing values.\nc() - Allows you to combine different filtering variables.\nna.rm = TRUE - This parameter instructs functions to ignore missing values.",
@@ -229,8 +229,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Select",
-    "href": "basic_functions_extended.html#Select",
+    "objectID": "basic_functions_extended.html#select",
+    "href": "basic_functions_extended.html#select",
     "title": "7  A bit more about basic functions",
     "section": "7.2 Select",
     "text": "7.2 Select\nThe select() function allows you to pick/keep specific columns from a data set.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nselect(data set name, column name/s)\n\n\nIn this example you can see both ways to use the select() function in a data set:\n\n# Select the species_id column from the rodents data set.\nselect(rodents, species_id)\n\nrodents |&gt; \n  select(species_id)\n\n\n7.2.1 Useful select functions\n\n\nc() - Allows you to combine different selections.\nstarts_with() - Allows you to select variables that start with a specific prefix.\nends_with() - Allows you to select variables that end with a specific suffix\ncontains() - Allows you to select variables that contain a specific string.",
@@ -240,8 +240,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Count",
-    "href": "basic_functions_extended.html#Count",
+    "objectID": "basic_functions_extended.html#count",
+    "href": "basic_functions_extended.html#count",
     "title": "7  A bit more about basic functions",
     "section": "7.3 Count",
     "text": "7.3 Count\nThe count() function counts the number of occurrences of all distinct elements in a column.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ncount(data set name, column name)\n\n\nIn this example you can see both ways to use the count() function in a data set:\n\n# Select the species_id column from the rodents data set.\ncount(rodents, species_id)\n\nrodents |&gt; \n  count(species_id)\n\n\n7.3.1 Useful count parameters and functions\n\n\nsort = TRUE/FALSE - This parameters dictates the order in which the variables will be arranged, TRUE will order the counts in a descending order, wile FALSE will order the counts in an ascending order.",
@@ -251,8 +251,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Mutate",
-    "href": "basic_functions_extended.html#Mutate",
+    "objectID": "basic_functions_extended.html#mutate",
+    "href": "basic_functions_extended.html#mutate",
     "title": "7  A bit more about basic functions",
     "section": "7.4 Mutate",
     "text": "7.4 Mutate\nThe mutate() function allows you to create and modify columns from a data set. - It can create new columns as functions of existing variables.\n\nIt can modify existing columns.\nIt can delete columns by setting them to NULL.\n\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nmutate(data set name, new/existing column name = function/expression)\n\n\n\n7.4.1 Useful mutate functions\n\n\n+, -, log(), *, / - Mathematical opperators\nifelse() - This function will return one value if a condition is TRUE and another if FALSE.\ncase_when() - This function allows you to evaluate multiple conditions and assign them individual values.\n\n\nIn this examples you can see different ways you can use the mutate() function in a data set:\n\n# Use mutate to create a new column that will show a 1 for females and a 2 for males\nrodents |&gt; \n  mutate(new_column = case_when(sex == \"F\" ~ 1, sex == \"M\" ~ 2))\n\n# Use mutate to create a new weight_kg column that converts the values on the weight column (in grams) into kilograms by dividing them\nrodents |&gt; \n  mutate(wight_kg=weight/1000)\n\n# Use mutate to set the delete the hindfoot_length column\nrodents |&gt; \n  mutate(hindfoot_length = NULL)",
@@ -262,8 +262,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Arrange",
-    "href": "basic_functions_extended.html#Arrange",
+    "objectID": "basic_functions_extended.html#arrange",
+    "href": "basic_functions_extended.html#arrange",
     "title": "7  A bit more about basic functions",
     "section": "7.5 Arrange",
     "text": "7.5 Arrange\nThe arrange() function allows for the ordering of the data by different variables. - If you input multiple columns they will be sorted hierarchically.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\narrange(data set name, column name/s)\n\n\nIn this example you can see both ways to use the arrange() function in a data set:\n\n#Arrange the rows so that they sorted by species_id (ascending) and then by sex (ascending) \narrange(rodents, species_id, sex)\n\nrodents |&gt; \n  arrange(species_id, sex)\n\n\n7.5.1 Useful arrange functions\n\ndesc() - Allows you to sort in descending order as the default order of the arrange() funcrion is ascending.\n\n\nrodents |&gt; \n  arrange(desc(year))",
@@ -273,8 +273,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Group_by",
-    "href": "basic_functions_extended.html#Group_by",
+    "objectID": "basic_functions_extended.html#group_by",
+    "href": "basic_functions_extended.html#group_by",
     "title": "7  A bit more about basic functions",
     "section": "7.6 Group_by",
     "text": "7.6 Group_by\nThe group_by() function uses an existing table to form a grouped table by splitting the data sate based on one or more variables.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ngroup_by(data set name, column name/s)\n\n\nIn this example you can see both ways to use the group_by() function in a data set:\n\n# Group the data set by species_id\ngroup_by(rodents, species_id)\n\nrodents |&gt; \n  group_by(species_id)",
@@ -284,8 +284,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Summarise",
-    "href": "basic_functions_extended.html#Summarise",
+    "objectID": "basic_functions_extended.html#summarise",
+    "href": "basic_functions_extended.html#summarise",
     "title": "7  A bit more about basic functions",
     "section": "7.7 Summarise",
     "text": "7.7 Summarise\nThe summarise() function allows you to calculate summary statistics and is usually used on grouped data produced by group_by(), as it creates one row for each combination of grouping variables.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nsummarise(data set name, new column name = function(column name))\n\n\n\n7.7.1 Useful summary functions and parameters\n\nmean()\nmedian()\nsd()\nmin()\nmax()\nn()\nn_distinct()\nna.rm = TRUE - This parameter instructs functions to ignore missing values.\n\nIn this example you can see both ways to use the summarise() function in a data set:\n\n# Take the mean hindfoot length\nsummarise(rodents, mean_hindfoot_length = mean(hindfoot_length, na.rm = TRUE))\n\nrodents |&gt; \n  summarise(mean_hindfoot_length = mean(hindfoot_length, na.rm = TRUE))",
@@ -295,8 +295,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Tibble",
-    "href": "basic_functions_extended.html#Tibble",
+    "objectID": "basic_functions_extended.html#tibble",
+    "href": "basic_functions_extended.html#tibble",
     "title": "7  A bit more about basic functions",
     "section": "7.8 Tibble",
     "text": "7.8 Tibble\nThe tibble() function allows you to create new data frames.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ntibble(data set name, column name 1 = variables, comuln name 2 = variables, …)\n\n\n\n7.8.1 Useful tibble functions\n\n\nc() - Allows you to combine different selections.\n\n\n\ntibble(\n  Teams = c(\"Blue\", \"Red\", \"Purple\"),\n  Score = c(100, 85, 99))\n\n# A tibble: 3 × 2\n  Teams  Score\n  &lt;chr&gt;  &lt;dbl&gt;\n1 Blue     100\n2 Red       85\n3 Purple    99",
@@ -306,8 +306,8 @@
     ]
   },
   {
-    "objectID": "basic_functions_extended.html#Drop_na",
-    "href": "basic_functions_extended.html#Drop_na",
+    "objectID": "basic_functions_extended.html#drop_na",
+    "href": "basic_functions_extended.html#drop_na",
     "title": "7  A bit more about basic functions",
     "section": "7.9 Drop_na",
     "text": "7.9 Drop_na\nThe drop_na() function allows you to to drop all the rows containing missing values.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\ndrop_na(data set name, column name)\n\n\nIn this example you can see both ways to use the drop_na() function in a data set:\n\n# Drop all the variables that have missing values in the hindfoot length column\ndrop_na(rodents, hindfoot_length)\n\nrodents |&gt; \n  drop_na(hindfoot_length)",
@@ -317,124 +317,124 @@
     ]
   },
   {
-    "objectID": "basic_statistics.html",
-    "href": "basic_statistics.html",
-    "title": "8  Descriptive statistics",
-    "section": "",
-    "text": "8.1 T-tests\nThe t_test() function allows you to performs one and two sample t-tests.",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
-    "objectID": "basic_statistics.html#t-tests",
-    "href": "basic_statistics.html#t-tests",
-    "title": "8  Descriptive statistics",
-    "section": "",
-    "text": "You do this by writing:\n\n\n\nt_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n8.1.1 Useful parameters\n\n\npaired = TRUE/FALSE - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.\nvar.equal = TURE/FALSE - This parameter indicates whether you want to treat the two variances as equal using the pooled variance (TRUE), or to use the Welch (or Satterthwaite) method to approximate the degrees of freedom (FALSE).\nalternative = - This parameter specifies the alternative hypothesis and can be either \"two.sided\" (default), \"greater\" or \"less\".\nconf.level = - This parameter specifies the confidence level.\nmu = - This parameter specifies the null hypothesis mean against which to test your sample mean.\n\n\nHere you can see an example of how to perform different t-tests using the t_test() function with different parameters:\n\n# One-sample test\nrodents |&gt; \nt_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nt_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nt_test(weight~sex, paired = TRUE)",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
-    "objectID": "basic_statistics.html#shapiro-wilk-normality-test",
-    "href": "basic_statistics.html#shapiro-wilk-normality-test",
-    "title": "8  Descriptive statistics",
-    "section": "8.2 Shapiro-Wilk Normality Test",
-    "text": "8.2 Shapiro-Wilk Normality Test\nThe shapiro_test() function allows you to performs Shapiro-Wilk test of normality.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nshapiro_test(data set name, column names)\n\n\nHere you can see an example of how to use the shapiro_test() function:\n\n# One-sample test\nrodents |&gt; \nwilcox_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nwilcox_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nwilcox_test(weight~sex, paired = TRUE)\n\n# Shapiro Wilk normality test for one variable\niris %&gt;% shapiro_test(Sepal.Length)\n\n# Shapiro Wilk normality test for two variables\niris %&gt;% shapiro_test(Sepal.Length, Petal.Width)\n\n# Multivariate normality test\nmshapiro_test(iris[, 1:3])",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
-    "objectID": "basic_statistics.html#wilcoxon-tests",
-    "href": "basic_statistics.html#wilcoxon-tests",
-    "title": "8  Descriptive statistics",
-    "section": "8.3 Wilcoxon Tests",
-    "text": "8.3 Wilcoxon Tests\nThe wilcox_test function allows you to perform one and two sample Wilcoxon tests.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nwilcox_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n8.3.1 Useful parameters\n\n\npaired = TRUE/FALSE - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.\nalternative = - This parameter specifies the alternative hypothesis and can be either \"two.sided\" (default), \"greater\" or \"less\".\nconf.level = - This parameter specifies the confidence level.\nmu = - This parameter specifies the null hypothesis mean against which to test your sample mean.\n\n\nHere you can see an example of how to use the wilcox_test() function with different parameters:\n\n# One-sample test\nrodents |&gt; \nwilcox_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nwilcox_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nwilcox_test(weight~sex, paired = TRUE)",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
-    "objectID": "basic_statistics.html#kruskal-wallis-test",
-    "href": "basic_statistics.html#kruskal-wallis-test",
-    "title": "8  Descriptive statistics",
-    "section": "8.4 Kruskal-Wallis Test",
-    "text": "8.4 Kruskal-Wallis Test\nThe kruskal_test() function allows you to perform Kruskal-Wallis rank sum test.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nkruskal_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\nHere you can see an example of how to use the kruskal_test() function:\n\nrodents |&gt; \nkruskal_test(weight~sex)",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
-    "objectID": "basic_statistics.html#levenes-test",
-    "href": "basic_statistics.html#levenes-test",
-    "title": "8  Descriptive statistics",
-    "section": "8.5 Levene’s Test",
-    "text": "8.5 Levene’s Test\nThe levene_test() function allows you to perform Levene’s test assesses whether the variances of two or more groups are equal.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nlevene_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n8.5.1 Useful parameters\n\n\ncenter = - This parameter specifies the center of each group, either mean (original Levene’s test) or median.\n\n\nHere you can see an example of how to use the levene_test() function with different parameters:\n\nrodents |&gt; \nlevene_test(weight~sex)",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
-    "objectID": "basic_statistics.html#anova-test",
-    "href": "basic_statistics.html#anova-test",
-    "title": "8  Descriptive statistics",
-    "section": "8.6 Anova Test",
-    "text": "8.6 Anova Test\nThe anova_test() function allows you to perform different types of ANOVA tests.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nanova_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\nHere you can see an example of how to use the anova_test() function:\n\n# One-way ANOVA test\nrodents |&gt; \nanova_test(weight~sex)\n\n# Two-way ANOVA test\nrodents |&gt; \nanova_test(weight~sex*genus)",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
-    "objectID": "basic_statistics.html#chi-squared-test",
-    "href": "basic_statistics.html#chi-squared-test",
-    "title": "8  Descriptive statistics",
-    "section": "8.7 Chi-squared Test",
-    "text": "8.7 Chi-squared Test\nThe chisq_test() function allows you to perform chi-squared tests (Goodness-of-Fit Test and Test for Independence) to assess whether there is a significant correlation between categorical variables.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nchisq_test(data set name, column name (numeric variable))\n\n\n\n8.7.1 Useful parameters\n\n\np = - This parameter specifies the vector of expected probabilities, which have to be of the same length as x.\n\n\nHere you can see an example of how to use the chisq_test() function with different parameters:\n\nrodents |&gt; \nchisq_test(weight)\n\n\n\n\n\n\n\n\nImportant\n\n\n\nTo use this all these function you will need to load library(rstatix)!!!",
-    "crumbs": [
-      "Part 2: R fundamentals",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Descriptive statistics</span>"
-    ]
-  },
-  {
     "objectID": "joining_functions_extended.html",
     "href": "joining_functions_extended.html",
-    "title": "9  Joining functions",
+    "title": "8  Joining functions",
     "section": "",
-    "text": "The joining functions allow you to merge separate data sets based on matching keys.\n\nleft_join() - Keeps all the values from the left table and matching rows from the right table. All unmatched rows in the right table will be NA.\nright_join() - Keeps all the values from the right table and matching rows from the left table. All unmatched rows in the left table will be NA.\ninner_join() - Keeps all values that have matching keys in both tables.\nfull_join() - Keeps all values from both tables and all unmatched rows will be NA.\n\n\n9.0.1 Useful functions and parameters\n\n\nby - Specifies the key column/s to join on.\nc() - Allows you to combine different joining keys if they don’t have the same name.\n\n\n\n\n\n\n\n\nYou do this by writing:\n\n\n\njoining_function(left data set, right data set, by = “column name”)\njoining_function(left data set, right data set, by = c(left column name= right column name))\n\n\nHere you can see an example of how to join to data sets:\n\ninner_join(band_members, band_instruments, by = \"name\")\n\nleft_join(band_members, band_instruments, by = \"name\")\n\nright_join(band_members, band_instruments, by = \"name\")\n\nfull_join(band_members, band_instruments, by = \"name\")",
+    "text": "The joining functions allow you to merge separate data sets based on matching keys.\n\nleft_join() - Keeps all the values from the left table and matching rows from the right table. All unmatched rows in the right table will be NA.\nright_join() - Keeps all the values from the right table and matching rows from the left table. All unmatched rows in the left table will be NA.\ninner_join() - Keeps all values that have matching keys in both tables.\nfull_join() - Keeps all values from both tables and all unmatched rows will be NA.\n\n\n8.0.1 Useful functions and parameters\n\n\nby - Specifies the key column/s to join on.\nc() - Allows you to combine different joining keys if they don’t have the same name.\n\n\n\n\n\n\n\n\nYou do this by writing:\n\n\n\njoining_function(left data set, right data set, by = “column name”)\njoining_function(left data set, right data set, by = c(left column name= right column name))\n\n\nHere you can see an example of how to join to data sets:\n\ninner_join(band_members, band_instruments, by = \"name\")\n\nleft_join(band_members, band_instruments, by = \"name\")\n\nright_join(band_members, band_instruments, by = \"name\")\n\nfull_join(band_members, band_instruments, by = \"name\")",
     "crumbs": [
       "Part 2: R fundamentals",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Joining functions</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Joining functions</span>"
     ]
   },
   {
     "objectID": "pivot_functions_extended.html",
     "href": "pivot_functions_extended.html",
-    "title": "10  Even more about pivot functions",
+    "title": "9  Even more about pivot functions",
     "section": "",
     "text": "The pivot functions allow you to reshape your data sets, which is useful when preparing your data for analysis or visualization.\n\npivot_longer() - Allows you to lengthen your data set from a wide format to a long format by reducing the number of columns and increasing the number of rows.\npivot_wider() - Allows you to widen your data set from a long format to a wide format by reducing the number of rows and increasing the number of columns.\n\n\n\n\n\n\n\nYou do this by writing:\n\n\n\npivot_function(data set name, cols = (column name : column name), names_to = “name”, values_to = “value”)\n\n\n\ncols - The columns you want to pivot.\nnames_to - The new column name where you want all the variable names to go.\nvalues_to - The new column name where you want all the values to go.\n\nHere you can see an example of how you can use the pivot_longer() function in a data set:\n\npivot_longer(rodents, cols= (\"hindfoot_length\" : \"weight\"), names_to = \"type_measurement\", values_to = \"measurements\")\n\nrodents |&gt; \n  pivot_longer(cols= (\"hindfoot_length\" : \"weight\"), names_to = \"type_measurement\", values_to = \"measurements\")",
     "crumbs": [
       "Part 2: R fundamentals",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Even more about pivot functions</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Even more about pivot functions</span>"
     ]
   },
   {
     "objectID": "web_exercises_11.html",
     "href": "web_exercises_11.html",
-    "title": "11  Web exercises",
+    "title": "10  Web exercises",
     "section": "",
-    "text": "all functions:\n\n\n\nfunction\nwidget\ndescription\n\n\n\n\nfitb()\ntext box\nfill-in-the-blank question\n\n\nmcq()\npull-down menu\nmultiple choice question\n\n\ntorf()\npull-down menu\nTRUE or FALSE question\n\n\nlongmcq()\nradio buttons\nMCQs with long answers\n\n\nhide() and unhide()\nbutton\nsolution revealed when clicked\n\n\n\n\n11.0.1 Let’s start with normal Multiple Choice Question (mcq\nWhat function loads a package that is already on your computer? install.packageinstall.packageslibrarylibraries\n\n\n11.0.2 Select section\n[1] “”\nWhat function to pick columns in a dataset?\n[1] “”\nHow would you write a code that filters for column ‘x’ and ‘y’?\n\n\n11.0.3 filter with AND, OR %in%\n\nfilter can be used to group rows: TRUEFALSE\nWhich is the correct form?\n\n filter(species_id = 'GM') filter(species_id %in% c(DM, NL) filter(species_id == %in% c(DM, NL)\n\n\n\n\n11.0.4 NA\n\n\nClick here to see the solution\n\n\n\n[1] \"it is all of them\"\n\n\n\nWhich is the correct form?\n\n drop.na is.na na.rm All of the above\n\nWhat functions treat NA values?\n\n\n11.0.5 Vectors\n\nWhat class would be a Vector with numeric and character values\nvectors in R can only hold one type of data\ndbl and int are numeric vectors\nchr is a character vector\nthere is no logical vector in this tibble/dataframe\n\nHow would I write a vector that shows the number 28?\n\n\n\nSee a hint\n\na &lt;- 28",
+    "text": "all functions:\n\n\n\nfunction\nwidget\ndescription\n\n\n\n\nfitb()\ntext box\nfill-in-the-blank question\n\n\nmcq()\npull-down menu\nmultiple choice question\n\n\ntorf()\npull-down menu\nTRUE or FALSE question\n\n\nlongmcq()\nradio buttons\nMCQs with long answers\n\n\nhide() and unhide()\nbutton\nsolution revealed when clicked\n\n\n\n\n10.0.1 Let’s start with normal Multiple Choice Question (mcq\nWhat function loads a package that is already on your computer? install.packageinstall.packageslibrarylibraries\n\n\n10.0.2 Select section\n[1] “”\nWhat function to pick columns in a dataset?\n[1] “”\nHow would you write a code that filters for column ‘x’ and ‘y’?\n\n\n10.0.3 filter with AND, OR %in%\n\nfilter can be used to group rows: TRUEFALSE\nWhich is the correct form?\n\n filter(species_id = 'GM') filter(species_id %in% c(DM, NL) filter(species_id == %in% c(DM, NL)\n\n\n\n\n10.0.4 NA\n\n\nClick here to see the solution\n\n\n\n[1] \"it is all of them\"\n\n\n\nWhich is the correct form?\n\n drop.na is.na na.rm All of the above\n\nWhat functions treat NA values?\n\n\n10.0.5 Vectors\n\nWhat class would be a Vector with numeric and character values\nvectors in R can only hold one type of data\ndbl and int are numeric vectors\nchr is a character vector\nthere is no logical vector in this tibble/dataframe\n\nHow would I write a vector that shows the number 28?\n\n\n\nSee a hint\n\na &lt;- 28",
     "crumbs": [
       "Part 2: R fundamentals",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Web exercises</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Web exercises</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html",
+    "href": "basic_statistics.html",
+    "title": "11  Descriptive statistics",
+    "section": "",
+    "text": "11.1 T-tests\nThe t_test() function allows you to performs one and two sample t-tests.",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#t-tests",
+    "href": "basic_statistics.html#t-tests",
+    "title": "11  Descriptive statistics",
+    "section": "",
+    "text": "You do this by writing:\n\n\n\nt_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n11.1.1 Useful parameters\n\n\npaired = TRUE/FALSE - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.\nvar.equal = TURE/FALSE - This parameter indicates whether you want to treat the two variances as equal using the pooled variance (TRUE), or to use the Welch (or Satterthwaite) method to approximate the degrees of freedom (FALSE).\nalternative = - This parameter specifies the alternative hypothesis and can be either \"two.sided\" (default), \"greater\" or \"less\".\nconf.level = - This parameter specifies the confidence level.\nmu = - This parameter specifies the null hypothesis mean against which to test your sample mean.\n\n\nHere you can see an example of how to perform different t-tests using the t_test() function with different parameters:\n\n# One-sample test\nrodents |&gt; \nt_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nt_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nt_test(weight~sex, paired = TRUE)",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#shapiro-wilk-normality-test",
+    "href": "basic_statistics.html#shapiro-wilk-normality-test",
+    "title": "11  Descriptive statistics",
+    "section": "11.2 Shapiro-Wilk Normality Test",
+    "text": "11.2 Shapiro-Wilk Normality Test\nThe shapiro_test() function allows you to performs Shapiro-Wilk test of normality.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nshapiro_test(data set name, column names)\n\n\nHere you can see an example of how to use the shapiro_test() function:\n\n# One-sample test\nrodents |&gt; \nwilcox_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nwilcox_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nwilcox_test(weight~sex, paired = TRUE)\n\n# Shapiro Wilk normality test for one variable\niris %&gt;% shapiro_test(Sepal.Length)\n\n# Shapiro Wilk normality test for two variables\niris %&gt;% shapiro_test(Sepal.Length, Petal.Width)\n\n# Multivariate normality test\nmshapiro_test(iris[, 1:3])",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#wilcoxon-tests",
+    "href": "basic_statistics.html#wilcoxon-tests",
+    "title": "11  Descriptive statistics",
+    "section": "11.3 Wilcoxon Tests",
+    "text": "11.3 Wilcoxon Tests\nThe wilcox_test function allows you to perform one and two sample Wilcoxon tests.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nwilcox_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n11.3.1 Useful parameters\n\n\npaired = TRUE/FALSE - This parameter indicates whether you want a paired (TRUE) or unpaired (FALSE) test.\nalternative = - This parameter specifies the alternative hypothesis and can be either \"two.sided\" (default), \"greater\" or \"less\".\nconf.level = - This parameter specifies the confidence level.\nmu = - This parameter specifies the null hypothesis mean against which to test your sample mean.\n\n\nHere you can see an example of how to use the wilcox_test() function with different parameters:\n\n# One-sample test\nrodents |&gt; \nwilcox_test(weight~sex, mu = 0)\n\n# Two-samples unpaired test\nrodents |&gt; \nwilcox_test(weight~sex)\n\n# Two-samples paired test\nrodents |&gt;  \nwilcox_test(weight~sex, paired = TRUE)",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#kruskal-wallis-test",
+    "href": "basic_statistics.html#kruskal-wallis-test",
+    "title": "11  Descriptive statistics",
+    "section": "11.4 Kruskal-Wallis Test",
+    "text": "11.4 Kruskal-Wallis Test\nThe kruskal_test() function allows you to perform Kruskal-Wallis rank sum test.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nkruskal_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\nHere you can see an example of how to use the kruskal_test() function:\n\nrodents |&gt; \nkruskal_test(weight~sex)",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#levenes-test",
+    "href": "basic_statistics.html#levenes-test",
+    "title": "11  Descriptive statistics",
+    "section": "11.5 Levene’s Test",
+    "text": "11.5 Levene’s Test\nThe levene_test() function allows you to perform Levene’s test assesses whether the variances of two or more groups are equal.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nlevene_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\n\n11.5.1 Useful parameters\n\n\ncenter = - This parameter specifies the center of each group, either mean (original Levene’s test) or median.\n\n\nHere you can see an example of how to use the levene_test() function with different parameters:\n\nrodents |&gt; \nlevene_test(weight~sex)",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#anova-test",
+    "href": "basic_statistics.html#anova-test",
+    "title": "11  Descriptive statistics",
+    "section": "11.6 Anova Test",
+    "text": "11.6 Anova Test\nThe anova_test() function allows you to perform different types of ANOVA tests.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nanova_test(data set name, column name (numeric variable) ~ column name (grouping variable))\n\n\nHere you can see an example of how to use the anova_test() function:\n\n# One-way ANOVA test\nrodents |&gt; \nanova_test(weight~sex)\n\n# Two-way ANOVA test\nrodents |&gt; \nanova_test(weight~sex*genus)",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
+    ]
+  },
+  {
+    "objectID": "basic_statistics.html#chi-squared-test",
+    "href": "basic_statistics.html#chi-squared-test",
+    "title": "11  Descriptive statistics",
+    "section": "11.7 Chi-squared Test",
+    "text": "11.7 Chi-squared Test\nThe chisq_test() function allows you to perform chi-squared tests (Goodness-of-Fit Test and Test for Independence) to assess whether there is a significant correlation between categorical variables.\n\n\n\n\n\n\nYou do this by writing:\n\n\n\nchisq_test(data set name, column name (numeric variable))\n\n\n\n11.7.1 Useful parameters\n\n\np = - This parameter specifies the vector of expected probabilities, which have to be of the same length as x.\n\n\nHere you can see an example of how to use the chisq_test() function with different parameters:\n\nrodents |&gt; \nchisq_test(weight)\n\n\n\n\n\n\n\n\nImportant\n\n\n\nTo use this all these function you will need to load library(rstatix)!!!",
+    "crumbs": [
+      "Part 3: Statistical tests",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Descriptive statistics</span>"
     ]
   },
   {

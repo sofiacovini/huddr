@@ -4,15 +4,15 @@
 ## Functions
 
 -   `library()` - Loads packages into R.
--   [`filter()`](basic_functions_extended.qmd){#Filter}- Allows you to retain/filter rows from a data set depending on the condition you want.
--   [`select()`](basic_functions_extended.qmd){#Select} - Allows you to pick/keep specific columns from a data set.
--   [`count()`](basic_functions_extended.qmd){#count} - Counts the number of occurrences of all distinct elements in a column.
--   [`mutate()`](basic_functions_extended.qmd){#Mutate} - Allows you to create and modify columns from a data set.
--   [`arrange()`](basic_functions_extended.qmd){#Arrange} - Allows for the ordering of the data by different variables.
--   [`group_by()`](basic_functions_extended.qmd){#Group_by} - Uses an existing table to form a grouped table by splitting the data sate based on one or more variables.
--   [`summarise()`](basic_functions_extended.qmd){#Summarise} - Allows you to calculate summary statistics and is usually used on grouped data produced by `group_by()`, as it creates one row for each combination of grouping variables.
--   [`tibble()`](basic_functions_extended.qmd){#Tibble} - Allows you to create new data frames.
--   [`drop_na()`](basic_functions_extended.qmd){#Drop_na} - Allows you to to drop all the rows containing missing values.
+-   [`filter()`](basic_functions_extended.qmd#filter)- Allows you to retain/filter rows from a data set depending on the condition you want.
+-   [`select()`](basic_functions_extended.qmd#select) - Allows you to pick/keep specific columns from a data set.
+-   [`count()`](basic_functions_extended.qmd#count) - Counts the number of occurrences of all distinct elements in a column.
+-   [`mutate()`](basic_functions_extended.qmd#mutate) - Allows you to create and modify columns from a data set.
+-   [`arrange()`](basic_functions_extended.qmd#arrange) - Allows for the ordering of the data by different variables.
+-   [`group_by()`](basic_functions_extended.qmd#group_by) - Uses an existing table to form a grouped table by splitting the data sate based on one or more variables.
+-   [`summarise()`](basic_functions_extended.qmd#summarise) - Allows you to calculate summary statistics and is usually used on grouped data produced by `group_by()`, as it creates one row for each combination of grouping variables.
+-   [`tibble()`](basic_functions_extended.qmd#tibble) - Allows you to create new data frames.
+-   [`drop_na()`](basic_functions_extended.qmd#drop_na) - Allows you to to drop all the rows containing missing values.
 :::
 
 ------------------------------------------------------------------------

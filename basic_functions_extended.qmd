@@ -1,6 +1,6 @@
 # A bit more about basic functions
 
-## Filter {#Filter}
+## Filter 
 
 The `filter()` function allows you to pick rows in a data set. To use this function you simply need to specify the requirement/condition by which you want to filter your data.
 
@@ -37,7 +37,7 @@ rodents |>
 
 ------------------------------------------------------------------------
 
-## Select {#Select}
+## Select
 
 The `select()` function allows you to pick/keep specific columns from a data set.
 
@@ -67,7 +67,7 @@ rodents |>
 
 ------------------------------------------------------------------------
 
-## Count {#Count}
+## Count
 
 The `count()` function counts the number of occurrences of all distinct elements in a column.
 
@@ -94,7 +94,7 @@ rodents |>
 
 ------------------------------------------------------------------------
 
-## Mutate {#Mutate}
+## Mutate 
 
 The `mutate()` function allows you to create and modify columns from a data set. - It can create new columns as functions of existing variables.
 
@@ -133,7 +133,7 @@ rodents |>
 
 ------------------------------------------------------------------------
 
-## Arrange {#Arrange}
+## Arrange
 
 The `arrange()` function allows for the ordering of the data by different variables. - If you input multiple columns they will be sorted hierarchically.
 
@@ -166,7 +166,7 @@ rodents |>
 
 ------------------------------------------------------------------------
 
-## Group_by {#Group_by}
+## Group_by
 
 The `group_by()` function uses an existing table to form a grouped table by splitting the data sate based on one or more variables.
 
@@ -189,7 +189,7 @@ rodents |>
 
 ------------------------------------------------------------------------
 
-## Summarise {#Summarise}
+## Summarise
 
 The `summarise()` function allows you to calculate summary statistics and is usually used on grouped data produced by `group_by()`, as it creates one row for each combination of grouping variables.
 
@@ -223,7 +223,7 @@ rodents |>
 
 ------------------------------------------------------------------------
 
-## Tibble {#Tibble}
+## Tibble
 
 The `tibble()` function allows you to create new data frames.
 
@@ -245,7 +245,7 @@ tibble(
 
 ------------------------------------------------------------------------
 
-## Drop_na {#Drop_na}
+## Drop_na
 
 The `drop_na()` function allows you to to drop all the rows containing missing values.
 

@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./basic_statistics.html" rel="next">
+<link href="./joining_functions_extended.html" rel="next">
 <link href="./basic_functions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -211,37 +211,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basic_statistics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Descriptive statistics</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./joining_functions_extended.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Joining functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Joining functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./pivot_functions_extended.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Even more about pivot functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Even more about pivot functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./web_exercises_11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Web exercises</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Web exercises</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part 3: Statistical tests</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./basic_statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Descriptive statistics</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Part 3: Functions and loops</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Part 4: Statistical tests</span></span>
+ <span class="menu-text">Part 4: Functions and loops</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -288,36 +295,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#Filter" id="toc-Filter" class="nav-link active" data-scroll-target="#Filter"><span class="header-section-number">7.1</span> Filter</a>
+  <li><a href="#filter" id="toc-filter" class="nav-link active" data-scroll-target="#filter"><span class="header-section-number">7.1</span> Filter</a>
   <ul class="collapse">
   <li><a href="#useful-filter-functions-and-parameters" id="toc-useful-filter-functions-and-parameters" class="nav-link" data-scroll-target="#useful-filter-functions-and-parameters"><span class="header-section-number">7.1.1</span> Useful filter functions and parameters</a></li>
   </ul></li>
-  <li><a href="#Select" id="toc-Select" class="nav-link" data-scroll-target="#Select"><span class="header-section-number">7.2</span> Select</a>
+  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select"><span class="header-section-number">7.2</span> Select</a>
   <ul class="collapse">
   <li><a href="#useful-select-functions" id="toc-useful-select-functions" class="nav-link" data-scroll-target="#useful-select-functions"><span class="header-section-number">7.2.1</span> Useful select functions</a></li>
   </ul></li>
-  <li><a href="#Count" id="toc-Count" class="nav-link" data-scroll-target="#Count"><span class="header-section-number">7.3</span> Count</a>
+  <li><a href="#count" id="toc-count" class="nav-link" data-scroll-target="#count"><span class="header-section-number">7.3</span> Count</a>
   <ul class="collapse">
   <li><a href="#useful-count-parameters-and-functions" id="toc-useful-count-parameters-and-functions" class="nav-link" data-scroll-target="#useful-count-parameters-and-functions"><span class="header-section-number">7.3.1</span> Useful count parameters and functions</a></li>
   </ul></li>
-  <li><a href="#Mutate" id="toc-Mutate" class="nav-link" data-scroll-target="#Mutate"><span class="header-section-number">7.4</span> Mutate</a>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><span class="header-section-number">7.4</span> Mutate</a>
   <ul class="collapse">
   <li><a href="#useful-mutate-functions" id="toc-useful-mutate-functions" class="nav-link" data-scroll-target="#useful-mutate-functions"><span class="header-section-number">7.4.1</span> Useful mutate functions</a></li>
   </ul></li>
-  <li><a href="#Arrange" id="toc-Arrange" class="nav-link" data-scroll-target="#Arrange"><span class="header-section-number">7.5</span> Arrange</a>
+  <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange"><span class="header-section-number">7.5</span> Arrange</a>
   <ul class="collapse">
   <li><a href="#useful-arrange-functions" id="toc-useful-arrange-functions" class="nav-link" data-scroll-target="#useful-arrange-functions"><span class="header-section-number">7.5.1</span> Useful arrange functions</a></li>
   </ul></li>
-  <li><a href="#Group_by" id="toc-Group_by" class="nav-link" data-scroll-target="#Group_by"><span class="header-section-number">7.6</span> Group_by</a></li>
-  <li><a href="#Summarise" id="toc-Summarise" class="nav-link" data-scroll-target="#Summarise"><span class="header-section-number">7.7</span> Summarise</a>
+  <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by"><span class="header-section-number">7.6</span> Group_by</a></li>
+  <li><a href="#summarise" id="toc-summarise" class="nav-link" data-scroll-target="#summarise"><span class="header-section-number">7.7</span> Summarise</a>
   <ul class="collapse">
   <li><a href="#useful-summary-functions-and-parameters" id="toc-useful-summary-functions-and-parameters" class="nav-link" data-scroll-target="#useful-summary-functions-and-parameters"><span class="header-section-number">7.7.1</span> Useful summary functions and parameters</a></li>
   </ul></li>
-  <li><a href="#Tibble" id="toc-Tibble" class="nav-link" data-scroll-target="#Tibble"><span class="header-section-number">7.8</span> Tibble</a>
+  <li><a href="#tibble" id="toc-tibble" class="nav-link" data-scroll-target="#tibble"><span class="header-section-number">7.8</span> Tibble</a>
   <ul class="collapse">
   <li><a href="#useful-tibble-functions" id="toc-useful-tibble-functions" class="nav-link" data-scroll-target="#useful-tibble-functions"><span class="header-section-number">7.8.1</span> Useful tibble functions</a></li>
   </ul></li>
-  <li><a href="#Drop_na" id="toc-Drop_na" class="nav-link" data-scroll-target="#Drop_na"><span class="header-section-number">7.9</span> Drop_na</a></li>
+  <li><a href="#drop_na" id="toc-drop_na" class="nav-link" data-scroll-target="#drop_na"><span class="header-section-number">7.9</span> Drop_na</a></li>
   </ul>
 </nav>
     </div>
@@ -343,8 +350,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="Filter" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="Filter"><span class="header-section-number">7.1</span> Filter</h2>
+<section id="filter" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="filter"><span class="header-section-number">7.1</span> Filter</h2>
 <p>The <code>filter()</code> function allows you to pick rows in a data set. To use this function you simply need to specify the requirement/condition by which you want to filter your data.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -379,8 +386,8 @@ You do this by writing:
 <hr>
 </section>
 </section>
-<section id="Select" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="Select"><span class="header-section-number">7.2</span> Select</h2>
+<section id="select" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="select"><span class="header-section-number">7.2</span> Select</h2>
 <p>The <code>select()</code> function allows you to pick/keep specific columns from a data set.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -416,8 +423,8 @@ You do this by writing:
 <hr>
 </section>
 </section>
-<section id="Count" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="Count"><span class="header-section-number">7.3</span> Count</h2>
+<section id="count" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="count"><span class="header-section-number">7.3</span> Count</h2>
 <p>The <code>count()</code> function counts the number of occurrences of all distinct elements in a column.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -450,8 +457,8 @@ You do this by writing:
 <hr>
 </section>
 </section>
-<section id="Mutate" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="Mutate"><span class="header-section-number">7.4</span> Mutate</h2>
+<section id="mutate" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="mutate"><span class="header-section-number">7.4</span> Mutate</h2>
 <p>The <code>mutate()</code> function allows you to create and modify columns from a data set. - It can create new columns as functions of existing variables.</p>
 <ul>
 <li>It can modify existing columns.</li>
@@ -496,8 +503,8 @@ You do this by writing:
 <hr>
 </section>
 </section>
-<section id="Arrange" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="Arrange"><span class="header-section-number">7.5</span> Arrange</h2>
+<section id="arrange" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="arrange"><span class="header-section-number">7.5</span> Arrange</h2>
 <p>The <code>arrange()</code> function allows for the ordering of the data by different variables. - If you input multiple columns they will be sorted hierarchically.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -532,8 +539,8 @@ You do this by writing:
 <hr>
 </section>
 </section>
-<section id="Group_by" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="Group_by"><span class="header-section-number">7.6</span> Group_by</h2>
+<section id="group_by" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="group_by"><span class="header-section-number">7.6</span> Group_by</h2>
 <p>The <code>group_by()</code> function uses an existing table to form a grouped table by splitting the data sate based on one or more variables.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -558,8 +565,8 @@ You do this by writing:
 </div>
 <hr>
 </section>
-<section id="Summarise" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="Summarise"><span class="header-section-number">7.7</span> Summarise</h2>
+<section id="summarise" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="summarise"><span class="header-section-number">7.7</span> Summarise</h2>
 <p>The <code>summarise()</code> function allows you to calculate summary statistics and is usually used on grouped data produced by <code>group_by()</code>, as it creates one row for each combination of grouping variables.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -597,8 +604,8 @@ You do this by writing:
 <hr>
 </section>
 </section>
-<section id="Tibble" class="level2" data-number="7.8">
-<h2 data-number="7.8" class="anchored" data-anchor-id="Tibble"><span class="header-section-number">7.8</span> Tibble</h2>
+<section id="tibble" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="tibble"><span class="header-section-number">7.8</span> Tibble</h2>
 <p>The <code>tibble()</code> function allows you to create new data frames.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -636,8 +643,8 @@ You do this by writing:
 <hr>
 </section>
 </section>
-<section id="Drop_na" class="level2" data-number="7.9">
-<h2 data-number="7.9" class="anchored" data-anchor-id="Drop_na"><span class="header-section-number">7.9</span> Drop_na</h2>
+<section id="drop_na" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="drop_na"><span class="header-section-number">7.9</span> Drop_na</h2>
 <p>The <code>drop_na()</code> function allows you to to drop all the rows containing missing values.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1295,8 +1302,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./basic_statistics.html" class="pagination-link" aria-label="Descriptive statistics">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Descriptive statistics</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./joining_functions_extended.html" class="pagination-link" aria-label="Joining functions">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Joining functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
